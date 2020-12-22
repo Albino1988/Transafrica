@@ -1,0 +1,153 @@
+{
+    "version": "0.4",
+    "title": "Single Quote \/ Pull-quote",
+    "type": "section",
+    "metadata": {
+        "template_type": "section",
+        "elementor_pro_required": true,
+        "wp_page_template": "default"
+    },
+    "content": [
+        {
+            "id": "36624061",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "80",
+                    "right": "0",
+                    "bottom": "80",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "50",
+                    "right": "20",
+                    "bottom": "50",
+                    "left": "20",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_image": {
+                    "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/08\/simone-hutsch-400259-unsplash.jpg",
+                    "id": 225
+                },
+                "background_position": "center center",
+                "background_attachment": "fixed",
+                "background_size": "cover",
+                "background_overlay_background": "classic",
+                "background_overlay_color": "#ffffff",
+                "background_overlay_opacity": {
+                    "unit": "px",
+                    "size": 0.85999999999999999
+                }
+            },
+            "elements": [
+                {
+                    "id": "75ae94b3",
+                    "settings": {
+                        "_column_size": 100,
+                        "border_border": "solid",
+                        "border_width": {
+                            "unit": "px",
+                            "top": "1",
+                            "right": "1",
+                            "bottom": "1",
+                            "left": "1",
+                            "isLinked": true
+                        },
+                        "border_color": "rgba(6,63,150,0.14)",
+                        "border_radius": {
+                            "unit": "px",
+                            "top": "3",
+                            "right": "3",
+                            "bottom": "3",
+                            "left": "3",
+                            "isLinked": true
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "20",
+                            "right": "50",
+                            "bottom": "50",
+                            "left": "50",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "893b8fe",
+                            "settings": {
+                                "blockquote_skin": "quotation",
+                                "alignment": "center",
+                                "blockquote_content": "\"Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero, lorem nam quis vitae quis morbi, id consequat mauris massa.\"\n",
+                                "author_name": "John Doe",
+                                "tweet_button_label": "Tweet",
+                                "content_text_color": "#102d5e",
+                                "content_typography_typography": "custom",
+                                "content_typography_font_family": "Playfair Display",
+                                "content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 29
+                                },
+                                "content_typography_line_height": {
+                                    "unit": "px",
+                                    "size": 42
+                                },
+                                "content_gap": {
+                                    "unit": "px",
+                                    "size": 29
+                                },
+                                "author_text_color": "#7c7c7c",
+                                "author_typography_typography": "custom",
+                                "author_typography_font_family": "Open Sans",
+                                "author_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "author_typography_text_transform": "uppercase",
+                                "author_gap": {
+                                    "unit": "px",
+                                    "size": 21
+                                },
+                                "button_size": {
+                                    "unit": "px",
+                                    "size": 1.6000000000000001
+                                },
+                                "button_border_radius": {
+                                    "unit": "px",
+                                    "size": 50
+                                },
+                                "button_typography_typography": "custom",
+                                "button_typography_font_family": "Playfair Display",
+                                "button_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 12
+                                },
+                                "quote_text_color": "rgba(6,63,150,0.14)",
+                                "quote_size": {
+                                    "unit": "px",
+                                    "size": 1.7
+                                },
+                                "tweet_button": "",
+                                "author_typography_font_weight": "bold",
+                                "author_typography_letter_spacing": {
+                                    "unit": "px",
+                                    "size": 0.40000000000000002
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "blockquote",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}

@@ -1,0 +1,339 @@
+{
+    "version": "0.4",
+    "title": "FAQ &#8211; One Column",
+    "type": "section",
+    "metadata": {
+        "template_type": "section",
+        "elementor_pro_required": false,
+        "wp_page_template": "default"
+    },
+    "content": [
+        {
+            "id": "726f4607",
+            "settings": {
+                "custom_height": {
+                    "unit": "vh",
+                    "size": 80
+                },
+                "custom_height_tablet": {
+                    "unit": "vh",
+                    "size": 100
+                },
+                "custom_height_mobile": {
+                    "unit": "vh",
+                    "size": 100
+                },
+                "structure": "34",
+                "background_background": "classic",
+                "background_position": "center right",
+                "background_repeat": "no-repeat",
+                "background_size": "cover",
+                "padding": {
+                    "unit": "px",
+                    "top": "50",
+                    "right": "0",
+                    "bottom": "50",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "60",
+                    "right": "30",
+                    "bottom": "60",
+                    "left": "30",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "40",
+                    "right": "10",
+                    "bottom": "40",
+                    "left": "10",
+                    "isLinked": false
+                },
+                "background_color": "#ffffff"
+            },
+            "elements": [
+                {
+                    "id": "6ace382a",
+                    "settings": {
+                        "_column_size": 16,
+                        "_inline_size": null,
+                        "_inline_size_tablet": 100,
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "30",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "margin_tablet": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "elType": "column"
+                },
+                {
+                    "id": "7e981c9b",
+                    "settings": {
+                        "_column_size": 66,
+                        "_inline_size": null,
+                        "_inline_size_tablet": 100,
+                        "content_position": "center",
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        },
+                        "margin_tablet": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "margin_mobile": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "14217b1d",
+                            "settings": {
+                                "title": "faq",
+                                "header_size": "h1",
+                                "title_color": "#102d5e",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Playfair Display",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 50
+                                },
+                                "typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 36
+                                },
+                                "typography_line_height": {
+                                    "unit": "px",
+                                    "size": 60
+                                },
+                                "typography_line_height_mobile": {
+                                    "unit": "px",
+                                    "size": 44
+                                },
+                                "_margin_mobile": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_animation": "fadeIn",
+                                "animation_duration": "slow",
+                                "align": "left",
+                                "typography_text_transform": "uppercase"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "9c9b095",
+                            "settings": {
+                                "editor": "<p>Vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero, lorem nam quis vitae quis morbi, id consequat mauris massa. Nibh sed accumsan pede gravida nec.\u00a0<\/p>",
+                                "text_color": "#7c7c7c",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Open Sans",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "typography_line_height": {
+                                    "unit": "px",
+                                    "size": 26
+                                },
+                                "_animation": "fadeIn",
+                                "align": "left",
+                                "_margin": {
+                                    "unit": "px",
+                                    "top": "30",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "text-editor",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "3cd89b4e",
+                            "settings": {
+                                "tabs": [
+                                    {
+                                        "tab_title": "Question #1",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "1d62446"
+                                    },
+                                    {
+                                        "tab_title": "Question #2",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "e42ae97"
+                                    },
+                                    {
+                                        "tab_title": "Question #3",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "1012b8c"
+                                    },
+                                    {
+                                        "tab_title": "Question #4",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "053bc57"
+                                    },
+                                    {
+                                        "tab_title": "Question #6",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "db47d34"
+                                    },
+                                    {
+                                        "tab_title": "Question #7",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "8ea4268"
+                                    },
+                                    {
+                                        "tab_title": "Question #8",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "14a440c"
+                                    },
+                                    {
+                                        "tab_title": "Question #9",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "4664d91"
+                                    },
+                                    {
+                                        "tab_title": "Question #10",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "bae185e"
+                                    },
+                                    {
+                                        "tab_title": "Question #11",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "6382c6d"
+                                    },
+                                    {
+                                        "tab_title": "Question #12",
+                                        "tab_content": "<p>Mollis vel morbi lacinia quam vel, imperdiet id nec consectetuer sit volutpat, nunc massa egestas, luctus molestie. Libero metus consectetuer vel libero, est dignissim turpis viverra etiam, est bibendum cras hac, suscipit consequat sit orci pede. Eget fusce fermentum egestas, gravida amet sagittis. Hendrerit suspendisse, aliquam ut, quis purus.<\/p>",
+                                        "_id": "a0542dc"
+                                    }
+                                ],
+                                "border_width": {
+                                    "unit": "px",
+                                    "size": 1
+                                },
+                                "border_color": "#eeeeee",
+                                "title_color": "#102d5e",
+                                "title_typography_typography": "custom",
+                                "title_typography_font_family": "Open Sans",
+                                "title_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 14
+                                },
+                                "title_padding": {
+                                    "unit": "px",
+                                    "top": "16",
+                                    "right": "26",
+                                    "bottom": "16",
+                                    "left": "26",
+                                    "isLinked": false
+                                },
+                                "icon_align": "right",
+                                "icon_color": "#102d5e",
+                                "icon_active_color": "rgba(16,45,94,0.6)",
+                                "icon_space": {
+                                    "unit": "px",
+                                    "size": 0
+                                },
+                                "content_color": "#7c7c7c",
+                                "content_typography_typography": "custom",
+                                "content_typography_font_family": "Open Sans",
+                                "content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "content_typography_line_height": {
+                                    "unit": "px",
+                                    "size": 26
+                                },
+                                "content_padding": {
+                                    "unit": "px",
+                                    "top": "10",
+                                    "right": "26",
+                                    "bottom": "10",
+                                    "left": "26",
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "accordion",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                },
+                {
+                    "id": "14201fe9",
+                    "settings": {
+                        "_column_size": 16,
+                        "_inline_size": null,
+                        "_inline_size_tablet": 100,
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "30",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "margin_tablet": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}

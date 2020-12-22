@@ -1,0 +1,431 @@
+{
+    "manifest_version": "1.0.8",
+    "title": "Block Kit 4",
+    "page_builder": "elementor",
+    "kit_version": "2.0.0",
+    "templates": [
+        {
+            "name": "Header (with Nav)",
+            "screenshot": "screenshots\/header-with-nav-.jpg",
+            "source": "templates\/header-with-nav-059a024b29be007373e64f6ad759dfd0.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Call to Action",
+            "screenshot": "screenshots\/call-to-action.jpg",
+            "source": "templates\/call-to-action-44ea0fa8f54e6a98721f3504070fc52a.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Newsletter Subscription (with Form)",
+            "screenshot": "screenshots\/newsletter-subscription-with-form-.jpg",
+            "source": "templates\/newsletter-subscription-with-form-b0ab270b92fd705df74cb95f5ccc3509.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Hero - Image Background",
+            "screenshot": "screenshots\/hero-image-background.jpg",
+            "source": "templates\/hero-image-background-f8d1b3c9d930e2d4faf72f83821c2930.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Hero - Video Background",
+            "screenshot": "screenshots\/hero-video-background.jpg",
+            "source": "templates\/hero-video-background-95c524a26280e3f1d3944363bbad354f.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Hero - Inline Video",
+            "screenshot": "screenshots\/hero-inline-video.jpg",
+            "source": "templates\/hero-inline-video-01120664c58d269d3d69da27314bcafa.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Hero - Newsletter Subscription (with Form)",
+            "screenshot": "screenshots\/hero-newsletter-subscription-with-form-.jpg",
+            "source": "templates\/hero-newsletter-subscription-with-form-34e667a262078deb5c1e5316ecf95081.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "FAQ - One Column",
+            "screenshot": "screenshots\/faq-one-column.jpg",
+            "source": "templates\/faq-one-column-18548f2f29fd64bc33c810a66aa5699c.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "FAQ - Two Column",
+            "screenshot": "screenshots\/faq-two-column.jpg",
+            "source": "templates\/faq-two-column-ca7aa9bc829992feb61ad0dc7d885377.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Team - Columns",
+            "screenshot": "screenshots\/team-columns.jpg",
+            "source": "templates\/team-columns-f9e47ab777508ae70c3690deae675b8e.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Team - Grid",
+            "screenshot": "screenshots\/team-grid.jpg",
+            "source": "templates\/team-grid-709d5488fbaed1131e724c1e70e35cde.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Single Profile",
+            "screenshot": "screenshots\/single-profile.jpg",
+            "source": "templates\/single-profile-1b94ebc9933e8fc03afd141b2e166911.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact-22b50a95e3e0a57e393fada1c880e2e2.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Contact (with Map)",
+            "screenshot": "screenshots\/contact-with-map-.jpg",
+            "source": "templates\/contact-with-map-cea2f9b9e3449ca0edeed06b1c74eb3c.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Map",
+            "screenshot": "screenshots\/map.jpg",
+            "source": "templates\/map-e9cb8a84a4ba8fe7a096232554f83235.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Focus Boxes",
+            "screenshot": "screenshots\/focus-boxes.jpg",
+            "source": "templates\/focus-boxes-de84b8b098db0b35bd8c9a0b8f761f55.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Pricing Menu",
+            "screenshot": "screenshots\/pricing-menu.jpg",
+            "source": "templates\/pricing-menu-e348601660f408b675bcc0d5dcc0be6b.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Pricing Table",
+            "screenshot": "screenshots\/pricing-table.jpg",
+            "source": "templates\/pricing-table-0f13ac4de56accd04c722afeb816bf8d.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Testimonial Grid",
+            "screenshot": "screenshots\/testimonial-grid.jpg",
+            "source": "templates\/testimonial-grid-2a86b0443c0ab4110f0b9f093bfa9ee2.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Testimonial Slider",
+            "screenshot": "screenshots\/testimonial-slider.jpg",
+            "source": "templates\/testimonial-slider-0be6118f9897f825c4e89e419ae5ff56.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Single Quote \/ Pull-quote",
+            "screenshot": "screenshots\/single-quote-pull-quote.jpg",
+            "source": "templates\/single-quote-pull-quote-5aa36421d60790cce952c6d1dc021b69.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Featured Product",
+            "screenshot": "screenshots\/featured-product.jpg",
+            "source": "templates\/featured-product-ea4a749bc2bb5b980cf54a3850d5216d.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Features & Benefit - Slider",
+            "screenshot": "screenshots\/features-benefit-slider.jpg",
+            "source": "templates\/features-benefit-slider-afa18953cfd8054a60666ae77aa5a1d3.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Features & Benefit - List",
+            "screenshot": "screenshots\/features-benefit-list.jpg",
+            "source": "templates\/features-benefit-list-9c6e971e461cb5297f6de5438d746cde.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About - Image, Heading & Copy",
+            "screenshot": "screenshots\/about-image-heading-copy.jpg",
+            "source": "templates\/about-image-heading-copy-17581fc152b9632ee04b4a7dd8ef4a7c.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About - Video, Heading & Copy",
+            "screenshot": "screenshots\/about-video-heading-copy.jpg",
+            "source": "templates\/about-video-heading-copy-ade5e478c9cc2cd39a094e3226df5a30.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Services",
+            "screenshot": "screenshots\/services.jpg",
+            "source": "templates\/services-f1b7d59f949a12a536bcd063534c2822.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Image Gallery - Carousel",
+            "screenshot": "screenshots\/image-gallery-carousel.jpg",
+            "source": "templates\/image-gallery-carousel-4fda0d9c8bb8d0e4a8ffb3337337c598.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Image Gallery - Grid",
+            "screenshot": "screenshots\/image-gallery-grid.jpg",
+            "source": "templates\/image-gallery-grid-2800429634eec02d61ef9b9a42a877b7.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Logo Grid - Images",
+            "screenshot": "screenshots\/logo-grid-images.jpg",
+            "source": "templates\/logo-grid-images-b850ed96fc1beec05675ba2e59ac4c00.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Footer",
+            "screenshot": "screenshots\/footer.jpg",
+            "source": "templates\/footer-919d3a0f005dcf2f938f1f7a38e29ac2.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Copyright",
+            "screenshot": "screenshots\/copyright.jpg",
+            "source": "templates\/copyright-254ffd9d75329549830d73c3cf81b218.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Popup",
+            "screenshot": "screenshots\/popup.jpg",
+            "source": "templates\/popup-5547b44cc4c7559ed1720f6328678ddc.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Popup 2",
+            "screenshot": "screenshots\/popup-2.jpg",
+            "source": "templates\/popup-2-dc6c8c9f53716562b9c32ceaa8fda1b8.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor",
+            "version": "2.9.6",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "Elementor Pro",
+            "version": "2.9.6",
+            "file": "elementor-pro\/elementor-pro.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": []
+}

@@ -1,0 +1,90 @@
+@font-face{
+  font-family:icomoon;
+  src:url(../fonts/icomoon.eot?fzv6fp);
+  src:url(../fonts/icomoon.eot?fzv6fp#iefix) format("embedded-opentype"),url(../fonts/icomoon.ttf?fzv6fp) format("truetype"),url(../fonts/icomoon.woff?fzv6fp) format("woff"),url(../fonts/icomoon.svg?fzv6fp#icomoon) format("svg");
+  font-weight:400;
+  font-style:normal;
+  font-display:block;
+}
+
+[class*=" icon-"],[class^=icon-]{
+  font-family:icomoon !important;
+  speak:none;
+  font-style:normal;
+  font-weight:400;
+  font-variant:normal;
+  text-transform:none;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.icon-bookmark:before{
+  content:"\e913";
+}
+.icon-delivery:before{
+  content:"\e914";
+}
+.icon-gift:before{
+  content:"\e915";
+}
+.icon-user:before{
+  content:"\e902";
+}
+.icon-phone:before{
+  content:"\e911";
+}
+.icon-cite:before{
+  content:"\e90f";
+}
+.icon-health:before{
+  content:"\e906";
+}
+.icon-fast-delivery:before{
+  content:"\e916";
+}
+.icon-file:before{
+  content:"\e912";
+}
+.icon-heart:before{
+  content:"\e90c";
+}
+.icon-reload:before{
+  content:"\e90d";
+}
+.icon-view:before{
+  content:"\e90e";
+}
+.icon-blood-pressure:before{
+  content:"\e907";
+}
+.icon-hospital-2:before{
+  content:"\e908";
+}
+.icon-hospital-bed:before{
+  content:"\e909";
+}
+.icon-medicine-1:before{
+  content:"\e90a";
+}
+.icon-pharmacy-1:before{
+  content:"\e90b";
+}
+.icon-mail:before{
+  content:"\e901";
+}
+.icon-search:before{
+  content:"\e903";
+}
+.icon-telephone:before{
+  content:"\e904";
+}
+.icon-time:before{
+  content:"\e905";
+}
+.icon-pin:before{
+  content:"\e910";
+}
+.icon-shopping-basket:before{
+  content:"\e900";
+}

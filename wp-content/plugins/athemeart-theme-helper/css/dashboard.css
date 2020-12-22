@@ -1,0 +1,268 @@
+
+.athemeart-admin-wrap .cd-box {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.cd-hide {
+  display: none !important;
+}
+
+.cd-hidden-heading {
+  display: none;
+}
+
+.cd-branding {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  vertical-align: middle;
+}
+.cd-branding img {
+  max-width: 150px;
+  display: block;
+}
+
+.cd-version {
+  background-color: #e5e5e5;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.cd-top-link {
+  margin-left: 10px;
+}
+
+.cd-row {
+  max-width: 930px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.cd-row * {
+  box-sizing: border-box;
+}
+.cd-row:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.cd-row.metabox-holder {
+  margin-top: 20px;
+}
+
+.cd-header {
+  background: #242424;
+  padding: 10px 15px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  margin-right:15px;
+  margin-top:15px;
+}
+.cd-header  a{
+	color:#F00;	
+}
+.cd-header .cd-header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cd-main {
+  width: 70%;
+  float: left;
+  padding-right: 30px;
+}
+@media screen and (max-width: 782px) {
+  .cd-main {
+    width: 100%;
+    float: none;
+    padding-right: 0px;
+  }
+}
+
+.cd-sidebar {
+  width: 30%;
+  float: right;
+}
+@media screen and (max-width: 782px) {
+  .cd-sidebar {
+    width: 100%;
+    float: none;
+  }
+}
+
+.cd-box {
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 782px) {
+  .cd-box {
+    margin-bottom: 15px;
+  }
+}
+.cd-box .cd-box-top {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  padding: 12px 15px;
+  font-weight: 600;
+}
+.cd-box .cd-box-top .cd-upgrade {
+  float: right;
+}
+.cd-box .cd-box-content {
+  padding: 15px;
+}
+.cd-box .cd-box-content p {
+  margin-top: 0px;
+}
+.cd-box .cd-sites-thumb img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.cd-list-flex {
+  list-style: none;
+  margin: -15px;
+}
+.cd-list-flex:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.cd-list-flex a {
+  text-decoration: none;
+}
+.cd-list-flex li {
+  width: 50%;
+  float: left;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0px;
+  border-right: 1px solid #eee;
+  padding: 12px 15px;
+}
+.cd-list-flex li:nth-child(2n) {
+  border-right: 0px none;
+}
+
+.action-btn {
+  display: inline-block;
+}
+
+.plugin-detail {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.cd-modules.cd-box-content {
+  padding: 0px;
+}
+.cd-modules .cd-module-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 15px;
+  border-bottom: 1px solid #eee;
+}
+.cd-modules .cd-module-item.cd-sub-module {
+  padding-left: 50px;
+}
+.cd-modules .cd-module-item:last-child {
+  margin-bottom: 0px;
+}
+.cd-modules .cd-module-toggle {
+  -ms-flex-preferred-size: 40px;
+      flex-basis: 40px;
+  display: block;
+  float: left;
+}
+.cd-modules .cd-module-info {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  position: relative;
+  padding-right: 100px;
+}
+.cd-modules .cd-module-info .cd-module-name {
+  font-weight: 500;
+}
+.cd-modules .cd-module-info .cd-module-name .cd-toggle-disable-notice {
+  font-weight: 400;
+  margin-left: 15px;
+  font-style: italic;
+}
+.cd-modules .cd-module-desc {
+  margin-top: 10px;
+  font-style: italic;
+}
+.cd-modules .cd-module-doc-link {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.cd-box-content input[type="text"],
+.cd-box-content input[type="number"],
+.cd-box-content input[type="password"],
+.cd-box-content input[type="email"],
+.cd-box-content input[type="email"] {
+  display: block;
+  max-width: 100%;
+}
+
+.futurio-msg .error {
+  color: #dc3232;
+}
+.futurio-msg .success {
+  color: #46b450;
+}
+
+.cd-box .hide-message {
+  display: none;
+}
+.cd-md-3{
+	width:30%;
+	margin:1.5%;
+	display:inline-block;
+	vertical-align:top;
+}
+.cd-md-6{
+	width:60%;
+	margin:1.5%;
+	display:inline-block;
+	vertical-align:top;
+}
+.cd-md-30{
+	width:35%;
+	margin:1.5%;
+	margin-left:0px;
+	display:inline-block;
+	vertical-align:top;
+}
+code.cd-modules.cd-box-content{
+	display:block;
+	padding:10px;
+	background:#FFF;
+	overflow:hidden;	
+}
+.bcf-pro{
+	position:absolute;
+	right:10px;
+	top:10px;
+	background:#090;
+	padding:8px 15px;
+	z-index:999;
+	color:#FFF;
+	-webkit-border-radius:3px;
+	font-size:12px;
+}

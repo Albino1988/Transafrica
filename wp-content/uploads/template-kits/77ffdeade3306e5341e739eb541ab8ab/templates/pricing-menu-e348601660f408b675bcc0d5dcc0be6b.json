@@ -1,0 +1,446 @@
+{
+    "version": "0.4",
+    "title": "Pricing Menu",
+    "type": "section",
+    "metadata": {
+        "template_type": "section",
+        "elementor_pro_required": true,
+        "wp_page_template": "default"
+    },
+    "content": [
+        {
+            "id": "28f24571",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "70",
+                    "right": "0",
+                    "bottom": "70",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#ffffff"
+            },
+            "elements": [
+                {
+                    "id": "3bb249f9",
+                    "settings": {
+                        "_column_size": 100,
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "20ea9874",
+                            "settings": {
+                                "margin": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": 0,
+                                    "bottom": "0",
+                                    "left": 0,
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "5a4d2e47",
+                                    "settings": {
+                                        "_column_size": 100
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "7b676a01",
+                                            "settings": {
+                                                "title": "Pricing List",
+                                                "header_size": "h3",
+                                                "title_color": "rgba(16,45,94,0.6)",
+                                                "typography_typography": "custom",
+                                                "typography_font_family": "Playfair Display",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 24
+                                                },
+                                                "typography_font_size_mobile": {
+                                                    "unit": "px",
+                                                    "size": 22
+                                                },
+                                                "_animation": "fadeIn",
+                                                "animation_duration": "slow",
+                                                "align": "center"
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "heading",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "18a03213",
+                                            "settings": {
+                                                "title": "Heading",
+                                                "header_size": "h1",
+                                                "title_color": "#102d5e",
+                                                "typography_typography": "custom",
+                                                "typography_font_family": "Playfair Display",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 50
+                                                },
+                                                "typography_font_size_mobile": {
+                                                    "unit": "px",
+                                                    "size": 36
+                                                },
+                                                "typography_line_height": {
+                                                    "unit": "px",
+                                                    "size": 60
+                                                },
+                                                "typography_line_height_mobile": {
+                                                    "unit": "px",
+                                                    "size": 44
+                                                },
+                                                "_margin_mobile": {
+                                                    "unit": "px",
+                                                    "top": "-10",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_animation": "fadeIn",
+                                                "animation_duration": "slow",
+                                                "align": "center",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "-10",
+                                                    "right": "0",
+                                                    "bottom": "40",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "heading",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                }
+                            ],
+                            "isInner": true,
+                            "elType": "section"
+                        },
+                        {
+                            "id": "660f1893",
+                            "settings": {
+                                "structure": "20"
+                            },
+                            "elements": [
+                                {
+                                    "id": "240ddac7",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": null,
+                                        "_inline_size_tablet": 100,
+                                        "box_shadow_box_shadow_type": "yes",
+                                        "box_shadow_box_shadow": {
+                                            "horizontal": 0,
+                                            "vertical": 0,
+                                            "blur": 80,
+                                            "spread": 0,
+                                            "color": "rgba(16,45,94,0.17)"
+                                        },
+                                        "margin": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "15",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": false
+                                        },
+                                        "margin_tablet": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "30",
+                                            "bottom": "0",
+                                            "left": "30",
+                                            "isLinked": false
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "40",
+                                            "right": "40",
+                                            "bottom": "40",
+                                            "left": "40",
+                                            "isLinked": true
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "40492776",
+                                            "settings": {
+                                                "price_list": [
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$20",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "21e6806",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-591331-unsplash.jpg",
+                                                            "id": 147
+                                                        }
+                                                    },
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$9",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "580ac1b",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-5913313-unsplash.jpg",
+                                                            "id": 146
+                                                        }
+                                                    },
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$32",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "d7be5a4",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-5913312-unsplash.jpg",
+                                                            "id": 145
+                                                        }
+                                                    }
+                                                ],
+                                                "heading_color": "#102d5e",
+                                                "heading_typography_typography": "custom",
+                                                "heading_typography_font_family": "Playfair Display",
+                                                "heading_typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 20
+                                                },
+                                                "description_color": "#9b9b9b",
+                                                "description_typography_typography": "custom",
+                                                "description_typography_font_family": "Open Sans",
+                                                "description_typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 14
+                                                },
+                                                "description_typography_line_height": {
+                                                    "unit": "px",
+                                                    "size": 22
+                                                },
+                                                "separator_style": "dashed",
+                                                "separator_weight": {
+                                                    "unit": "px",
+                                                    "size": 1
+                                                },
+                                                "separator_color": "#9b9b9b",
+                                                "separator_spacing": {
+                                                    "unit": "px",
+                                                    "size": 10
+                                                },
+                                                "image_size_size": "custom",
+                                                "image_size_custom_dimension": {
+                                                    "width": "60",
+                                                    "height": "60"
+                                                },
+                                                "border_radius": {
+                                                    "unit": "%",
+                                                    "top": "50",
+                                                    "right": "50",
+                                                    "bottom": "50",
+                                                    "left": "50",
+                                                    "isLinked": true
+                                                },
+                                                "row_gap": {
+                                                    "unit": "px",
+                                                    "size": 31
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "price-list",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                },
+                                {
+                                    "id": "4d836de8",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": null,
+                                        "_inline_size_tablet": 100,
+                                        "box_shadow_box_shadow_type": "yes",
+                                        "box_shadow_box_shadow": {
+                                            "horizontal": 0,
+                                            "vertical": 0,
+                                            "blur": 80,
+                                            "spread": 0,
+                                            "color": "rgba(16,45,94,0.17)"
+                                        },
+                                        "margin": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "15",
+                                            "isLinked": false
+                                        },
+                                        "margin_tablet": {
+                                            "unit": "px",
+                                            "top": "20",
+                                            "right": "30",
+                                            "bottom": "0",
+                                            "left": "30",
+                                            "isLinked": false
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "40",
+                                            "right": "40",
+                                            "bottom": "40",
+                                            "left": "40",
+                                            "isLinked": true
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "5be28dd8",
+                                            "settings": {
+                                                "price_list": [
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$20",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "21e6806",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-591331-unsplash.jpg",
+                                                            "id": 147
+                                                        }
+                                                    },
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$9",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "580ac1b",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-5913313-unsplash.jpg",
+                                                            "id": 146
+                                                        }
+                                                    },
+                                                    {
+                                                        "title": "Product",
+                                                        "item_description": "Aliquet adipiscing vivamus ultrices ipsum, commodo vitae, elit nec ipsam luctus. Eget non vitae scelerisque eget sapiente libero.",
+                                                        "price": "$32",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "d7be5a4",
+                                                        "image": {
+                                                            "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-5913312-unsplash.jpg",
+                                                            "id": 145
+                                                        }
+                                                    }
+                                                ],
+                                                "heading_color": "#102d5e",
+                                                "heading_typography_typography": "custom",
+                                                "heading_typography_font_family": "Playfair Display",
+                                                "heading_typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 20
+                                                },
+                                                "description_color": "#9b9b9b",
+                                                "description_typography_typography": "custom",
+                                                "description_typography_font_family": "Open Sans",
+                                                "description_typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 14
+                                                },
+                                                "description_typography_line_height": {
+                                                    "unit": "px",
+                                                    "size": 22
+                                                },
+                                                "separator_style": "dashed",
+                                                "separator_weight": {
+                                                    "unit": "px",
+                                                    "size": 1
+                                                },
+                                                "separator_color": "#9b9b9b",
+                                                "separator_spacing": {
+                                                    "unit": "px",
+                                                    "size": 10
+                                                },
+                                                "image_size_size": "custom",
+                                                "image_size_custom_dimension": {
+                                                    "width": "60",
+                                                    "height": "60"
+                                                },
+                                                "border_radius": {
+                                                    "unit": "%",
+                                                    "top": "50",
+                                                    "right": "50",
+                                                    "bottom": "50",
+                                                    "left": "50",
+                                                    "isLinked": true
+                                                },
+                                                "row_gap": {
+                                                    "unit": "px",
+                                                    "size": 31
+                                                }
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "price-list",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                }
+                            ],
+                            "isInner": true,
+                            "elType": "section"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}

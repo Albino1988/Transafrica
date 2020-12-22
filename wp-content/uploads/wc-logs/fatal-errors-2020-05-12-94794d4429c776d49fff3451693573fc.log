@@ -1,0 +1,30 @@
+2020-05-12T05:42:52+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\seo-by-rank-math\vendor\cmb2\cmb2\includes\CMB2_Hookup_Base.php on line 16
+
+2020-05-12T05:43:20+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\functions.php on line 5785
+
+2020-05-12T05:43:23+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-admin\includes\bookmark.php on line 16
+
+2020-05-12T05:43:25+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\smart-slider-3\nextend\library\libraries\localization\pomo\translations.php on line 10
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\athemeart-theme-helper\vendors\codestar-framework\fields\radio\radio.php on line 1
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-duplicate-product.php on line 9
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\athemeart-theme-helper\vendors\codestar-framework\cs-framework-path.php on line 109
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\athemeart-theme-helper\vendors\codestar-framework\fields\icon\icon.php on line 1
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\athemeart-theme-helper\vendors\codestar-framework\fields\radio\radio.php on line 1
+
+2020-05-12T10:01:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\athemeart-theme-helper\vendors\codestar-framework\fields\radio\radio.php on line 1
+
+2020-05-12T11:08:27+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\class-wp-image-editor.php on line 484
+
+2020-05-12T11:09:09+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\class-wp-image-editor.php on line 484
+
+2020-05-12T11:10:24+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\Requests\Transport\cURL.php on line 441
+
+2020-05-12T11:11:44+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\class-wp-image-editor.php on line 484
+
+2020-05-12T11:26:39+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\class-wp-image-editor-imagick.php on line 366
+

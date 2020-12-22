@@ -1,0 +1,14 @@
+2020-05-19T08:00:19+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\smart-slider-3\nextend\library\libraries\localization\pomo\entry.php on line 10
+
+2020-05-19T08:00:49+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\seo-by-rank-math\includes\class-metadata.php on line 13
+
+2020-05-19T08:00:52+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-admin\includes\media.php on line 16
+
+2020-05-19T08:01:18+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-includes\wp-db.php on line 2030
+
+2020-05-19T08:31:33+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\Schedulers\OrdersScheduler.php on line 10
+
+2020-05-19T08:31:58+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\woocommerce\packages\woocommerce-rest-api\src\Controllers\Version3\class-wc-rest-system-status-tools-controller.php on line 19
+
+2020-05-19T08:52:54+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\MAMP2\htdocs\Transafrica\wp-content\plugins\elementor-pro\modules\woocommerce\module.php on line 14
+

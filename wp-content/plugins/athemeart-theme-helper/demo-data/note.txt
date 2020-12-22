@@ -1,0 +1,84 @@
+if( ! function_exists( 'bcf_thmeme_import_files' ) ) :
+	/**
+	*
+	*/
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if ( is_plugin_active('one-click-demo-import/one-click-demo-import.php') ){
+		
+	function bcf_thmeme_import_files() {
+		return array(
+			array(
+				'import_file_name'			=> esc_html__( 'One Page Demo', 'business-consulting-pro' ),
+				'categories'				=> array( 'one page demo' ),
+				'local_import_file'			=> trailingslashit( get_template_directory() ) . 'inc/demo-data/one-page-demo.xml',
+				
+				'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demo-data/one-page-demo-widgets.wie',
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => get_template_directory_uri().'/screenshot.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bc/',
+			),
+			array(
+				'import_file_name'			=> esc_html__( 'BC Shop Demo', 'business-consulting-pro' ),
+				'categories'				=> array( 'bc-shop demo' ),
+				'local_import_file'			=> trailingslashit( get_template_directory() ) . 'inc/demo-data/bcshop-demo.xml',
+				
+				'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/demo-data/bcshop-demo-widgets.wie',
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => get_template_directory_uri().'/bc-shop.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bc-shop/',
+			)
+			
+		);
+	}
+	
+	}
+	else{
+		
+		function bcf_thmeme_import_files() {
+		return array(
+			array(
+				'import_file_name'			=> esc_html__( 'Free Demo', 'business-consulting-pro' ),
+				'categories'				=> array( 'free','Elementor' ),
+				'local_import_file'			=> trailingslashit( plugin_dir_path( __FILE__ ) ) . 'bcf/one-page-demo.xml',
+				
+				'local_import_widget_file'     => trailingslashit( plugin_dir_path( __FILE__ ) ) . 'bcf/one-page-demo-widgets.wie',
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => plugin_dir_url( __FILE__ ).'bcf/img/screenshot.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bcf/',
+				'pro'                  => 0,
+			),
+			array(
+				'import_file_name'			=> esc_html__( 'BCF Creative ( PRO )', 'business-consulting-pro' ),
+				'categories'				=> array( 'One Page','Business','Elementor' ),
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => plugin_dir_url( __FILE__ ).'bcf/img/bcf-creative.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bcf/bcf-creative/',
+				'pro'                  => 1,
+			),
+			array(
+				'import_file_name'			=> esc_html__( 'BCF Business ( PRO )', 'business-consulting-pro' ),
+				'categories'				=> array( 'Business','Elementor' ),
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => plugin_dir_url( __FILE__ ).'bcf/img/bcf-business.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bcf/bcf-creative/',
+				'pro'                  => 1,
+			),
+			array(
+				'import_file_name'			=> esc_html__( 'BCF Shop ( PRO )', 'business-consulting-pro' ),
+				'categories'				=> array( 'WooCommerce','Elementor' ),
+				'import_notice'				   => esc_html__( 'After import demo data, just set static homepage from settings > reading, check widgets & menus.', 'business-consulting-pro' ),
+				'import_preview_image_url'     => plugin_dir_url( __FILE__ ).'bcf/img/bcf-shop.png',
+				'preview_url'                  => 'https://athemeart.com/demo/bcf/bcf-shop/',
+				'pro'                  => 1,
+			),
+			
+			
+		);
+	}
+	
+			
+	}
+	
+	//add_filter( 'pt-ocdi/import_files', 'bcf_thmeme_import_files' );
+	
+endif;

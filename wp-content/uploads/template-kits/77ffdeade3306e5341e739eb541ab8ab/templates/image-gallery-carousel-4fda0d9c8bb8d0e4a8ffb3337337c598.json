@@ -1,0 +1,94 @@
+{
+    "version": "0.4",
+    "title": "Image Gallery &#8211; Carousel",
+    "type": "section",
+    "metadata": {
+        "template_type": "section",
+        "elementor_pro_required": false,
+        "wp_page_template": "default"
+    },
+    "content": [
+        {
+            "id": "6616757d",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "70",
+                    "right": "0",
+                    "bottom": "70",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#ffffff"
+            },
+            "elements": [
+                {
+                    "id": "593e7562",
+                    "settings": {
+                        "_column_size": 100
+                    },
+                    "elements": [
+                        {
+                            "id": "24d41128",
+                            "settings": {
+                                "carousel": [
+                                    {
+                                        "id": 314,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/gallery-5.jpg"
+                                    },
+                                    {
+                                        "id": 312,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/gallery-3.jpg"
+                                    },
+                                    {
+                                        "id": 311,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/gallery-2.jpg"
+                                    },
+                                    {
+                                        "id": 310,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/gallery-1.jpg"
+                                    },
+                                    {
+                                        "id": 309,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/gallery-6.jpg"
+                                    },
+                                    {
+                                        "id": 147,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-591331-unsplash.jpg"
+                                    },
+                                    {
+                                        "id": 148,
+                                        "url": "https:\/\/wp.envatoextensions.com\/kit-68\/wp-content\/uploads\/sites\/71\/2018\/09\/robin-spielmann-5913311-unsplash.jpg"
+                                    }
+                                ],
+                                "thumbnail_size": "full",
+                                "slides_to_scroll": "3",
+                                "image_stretch": "yes",
+                                "arrows_position": "outside",
+                                "arrows_color": "#a0a0a0",
+                                "image_spacing": "custom",
+                                "image_border_radius": {
+                                    "unit": "px",
+                                    "top": "3",
+                                    "right": "3",
+                                    "bottom": "3",
+                                    "left": "3",
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "image-carousel",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}
