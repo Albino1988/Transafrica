@@ -6,9 +6,6 @@ wp_enqueue_style('pfg-metabox-css', PFG_PLUGIN_URL . 'css/metabox.css');
 
 //load settings
 $pf_gallery_settings = get_post_meta( $post->ID, 'awl_filter_gallery'.$post->ID, true);
-/* echo "<pre>";
-print_r($pf_gallery_settings);
-echo "</pre>"; */
 ?>
 <div class="row gallery-content-photo-wall">
 
@@ -23,7 +20,7 @@ echo "</pre>"; */
 	<div style="text-align:center; border: solid 2px red; padding: 50px;">
 		<h1 style="color:red;"><strong>!!! IMPORTANT NOTICE !!!</strong></h1>
 		<h1 style="color:blue;">Update Plugin Settings Those Users Was Using Version 1.0.7 Or Previous Once</h1>
-		<p>It will prevent you to loose your previouly created galleries and settings.</p>
+		<p>It will prevent you to lose your previously created galleries and settings.</p>
 		<a href="edit.php?post_type=awl_filter_gallery&page=pfg-update-plugin" name="update_settings" id="update_settings" class="button button-primary button-hero">Click Here</a>
 	</div>
 	<?php } ?>
@@ -87,7 +84,6 @@ echo "</pre>"; */
 						$allimagesetting = get_post_meta( $post->ID, 'awl_filter_gallery'.$post->ID, true);
 						$all_category = get_option('awl_portfolio_filter_gallery_categories');
 
-
 						if(isset($allimagesetting['image-ids'])) {
 							if (array_key_exists("filters",$allimagesetting)) {
 							$filters = $allimagesetting['filters'];
@@ -96,13 +92,21 @@ echo "</pre>"; */
 						foreach($allimagesetting['image-ids'] as $id) {
 						$thumbnail = wp_get_attachment_image_src($id, 'medium', true);
 						$attachment = get_post( $id );
-						$image_link = $allimagesetting['image-link'][$count];
+						if(isset($allimagesetting['image-link'])) {
+							$image_link = $allimagesetting['image-link'][$count];
+						} else {
+							$image_link = "";
+						}
 						if(isset($allimagesetting['image-desc'])) {
 							$image_desc = $allimagesetting['image-desc'][$count];
 						} else {
 							$image_desc = "";
 						}
-						$image_type =  $allimagesetting['slide-type'][$count];
+						if(isset($allimagesetting['slide-type'])) {
+							$image_type =  $allimagesetting['slide-type'][$count];
+						} else {
+							$image_type = "";
+						}
 						?>
 						<li class="item image">
 							<img class="new-image" src="<?php echo $thumbnail[0]; ?>" alt="<?php echo get_the_title($id); ?>" style="height: 150px; width: 98%; border-radius: 8px;">
@@ -157,12 +161,12 @@ echo "</pre>"; */
 						<div class="col-md-4">
 							<div class="ma_field_discription">
 								<h4><?php _e('Gallery Thumbnail Size', 'portfolio-filter-gallery'); ?></h4>
-								<p><?php _e('Choose Gallery Thumbnail Size', 'portfolio-filter-gallery'); ?></p> 
+								<p><?php _e('Choose gallery thumbnail size', 'portfolio-filter-gallery'); ?></p> 
 							</div>
 						</div>
 						<div class="col-md-8">
 							<div class="ma_field panel-body">
-								<?php if(isset($pf_gallery_settings['gal_size'])) $gal_size = $pf_gallery_settings['gal_size']; else $gal_size = "full"; ?>
+								<?php if(isset($pf_gallery_settings['gal_size'])) $gal_size = $pf_gallery_settings['gal_size']; else $gal_size = "large"; ?>
 								<select id="gal_size" name="gal_size" class="selectbox_settings form-control">
 									<option value="thumbnail" <?php if($gal_size == "thumbnail") echo "selected=selected"; ?>><?php _e('Thumbnail - 150 x 150', 'portfolio-filter-gallery'); ?></option>
 									<option value="medium" <?php if($gal_size == "medium") echo "selected=selected"; ?>><?php _e('Medium - 300 x 169', 'portfolio-filter-gallery'); ?></option>
@@ -177,8 +181,8 @@ echo "</pre>"; */
 						<div class="row">
 							<div class="col-md-4">
 								<div class="ma_field_discription">
-									<h4><?php _e('Columns On Large Desktops', 'portfolio-filter-gallery'); ?></h4>
-									<p><?php _e('Set icon on photos', 'portfolio-filter-gallery'); ?></p> 
+									<h4><?php _e('Columns On Desktops', 'portfolio-filter-gallery'); ?></h4>
+									<p><?php _e('Set columns for large desctops', 'portfolio-filter-gallery'); ?></p>
 								</div>
 							</div>
 							<div class="col-md-8">
@@ -200,8 +204,8 @@ echo "</pre>"; */
 						<div class="row">
 							<div class="col-md-4">
 								<div class="ma_field_discription">
-									<h4><?php _e('Columns On Desktops', 'portfolio-filter-gallery'); ?></h4>
-									<p><?php _e('Set icon on photos', 'portfolio-filter-gallery'); ?></p> 
+									<h4><?php _e('Columns On Tablet', 'portfolio-filter-gallery'); ?></h4>
+									<p><?php _e('Set columns for desctops', 'portfolio-filter-gallery'); ?></p> 
 								</div>
 							</div>
 							<div class="col-md-8">
@@ -223,8 +227,8 @@ echo "</pre>"; */
 						<div class="row">
 							<div class="col-md-4">
 								<div class="ma_field_discription">
-									<h4><?php _e('Columns On Tablets', 'portfolio-filter-gallery'); ?></h4>
-									<p><?php _e('Set icon on photos', 'portfolio-filter-gallery'); ?></p> 
+									<h4><?php _e('Columns On Phone Landscape', 'portfolio-filter-gallery'); ?></h4>
+									<p><?php _e('Set columns for tablets', 'portfolio-filter-gallery'); ?></p> 
 								</div>
 							</div>
 							<div class="col-md-8">
@@ -232,7 +236,7 @@ echo "</pre>"; */
 									<div class="switch-field em_size_field">
 										<?php if(isset($pf_gallery_settings['col_tablets'])) $col_tablets = $pf_gallery_settings['col_tablets']; else $col_tablets = "col-sm-4"; ?>
 										<select id="col_tablets" name="col_tablets" class="selectbox_settings form-control">
-											<option value="col-sm-12" <?php if($col_tablets == "col-sm-12") echo "selected=selected"; ?>><?php _e('12 Column', 'portfolio-filter-gallery'); ?></option>
+											<option value="col-sm-12" <?php if($col_tablets == "col-sm-12") echo "selected=selected"; ?>><?php _e('1 Column', 'portfolio-filter-gallery'); ?></option>
 											<option value="col-sm-6" <?php if($col_tablets == "col-sm-6") echo "selected=selected"; ?>><?php _e('2 Column', 'portfolio-filter-gallery'); ?></option>
 											<option value="col-sm-4" <?php if($col_tablets == "col-sm-4") echo "selected=selected"; ?>><?php _e('3 Column', 'portfolio-filter-gallery'); ?></option>
 											<option value="col-sm-3" <?php if($col_tablets == "col-sm-3") echo "selected=selected"; ?>><?php _e('4 Column', 'portfolio-filter-gallery'); ?></option>
@@ -245,8 +249,8 @@ echo "</pre>"; */
 						<div class="row">
 							<div class="col-md-4">
 								<div class="ma_field_discription">
-									<h4><?php _e('Columns On Phone', 'portfolio-filter-gallery'); ?></h4>
-									<p><?php _e('Set icon on photos', 'portfolio-filter-gallery'); ?></p> 
+									<h4><?php _e('Columns On Phone Portrait', 'portfolio-filter-gallery'); ?></h4>
+									<p><?php _e('Set columns for large desctops', 'portfolio-filter-gallery'); ?></p> 
 								</div>
 							</div>
 							<div class="col-md-8">
@@ -254,13 +258,33 @@ echo "</pre>"; */
 									<div class="switch-field em_size_field">
 										<?php if(isset($pf_gallery_settings['col_phones'])) $col_phones = $pf_gallery_settings['col_phones']; else $col_phones = "col-xs-6"; ?>
 										<select id="col_phones" name="col_phones" class="selectbox_settings form-control">
-											<option value="col-xs-12" <?php if($col_phones == "col-xs-12") echo "selected=selected"; ?>><?php _e('1 Column', 'portfolio-filter-gallery'); ?></option>
-											<option value="col-xs-6" <?php if($col_phones == "col-xs-6") echo "selected=selected"; ?>><?php _e('2 Column', 'portfolio-filter-gallery'); ?></option>
-											<option value="col-xs-4" <?php if($col_phones == "col-xs-4") echo "selected=selected"; ?>><?php _e('3 Column', 'portfolio-filter-gallery'); ?></option>
-											<option value="col-xs-3" <?php if($col_phones == "col-xs-3") echo "selected=selected"; ?>><?php _e('4 Column', 'portfolio-filter-gallery'); ?></option>
+											<option value="col-12" <?php if($col_phones == "col-12") echo "selected=selected"; ?>><?php _e('1 Column', 'portfolio-filter-gallery'); ?></option>
+											<option value="col-6" <?php if($col_phones == "col-6") echo "selected=selected"; ?>><?php _e('2 Column', 'portfolio-filter-gallery'); ?></option>
+											<option value="col-4" <?php if($col_phones == "col-4") echo "selected=selected"; ?>><?php _e('3 Column', 'portfolio-filter-gallery'); ?></option>
+											<option value="col-3" <?php if($col_phones == "col-3") echo "selected=selected"; ?>><?php _e('4 Column', 'portfolio-filter-gallery'); ?></option>
 										</select>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+					<!--Direction-->
+					<div class="row">
+						<div class="col-md-4">
+							<div class="ma_field_discription">
+								<h4><?php _e('Gallery Direction', 'portfolio-filter-gallery'); ?></h4>
+								<p><?php _e('Change direction for RTL site', 'portfolio-filter-gallery'); ?></p> 
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="ma_field panel-body">
+								<p class="switch-field em_size_field">
+								<?php if(isset($pf_gallery_settings['gallery_direction'])) $gallery_direction = $pf_gallery_settings['gallery_direction']; else $gallery_direction = "ltr"; ?>
+								<input type="radio" name="gallery_direction" id="gallery_direction1" value="rtl" <?php if($gallery_direction == "rtl") echo "checked=checked"; ?>>
+								<label for="gallery_direction1"><?php _e('Rtl', 'portfolio-filter-gallery'); ?></label>
+								<input type="radio" name="gallery_direction" id="gallery_direction2" value="ltr" <?php if($gallery_direction == "ltr") echo "checked=checked"; ?>>
+								<label for="gallery_direction2"><?php _e('Ltr', 'portfolio-filter-gallery'); ?></label>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -269,72 +293,41 @@ echo "</pre>"; */
 						<div class="col-md-4">
 							<div class="ma_field_discription">
 								<h4><?php _e('Image Hover Effects', 'portfolio-filter-gallery'); ?></h4>
-								<p><?php _e('Choose Image Hover Effects', 'portfolio-filter-gallery'); ?></p> 
+								<p><?php _e('Choose Image Hover Effect', 'portfolio-filter-gallery'); ?></p> 
 							</div>
 						</div>
 						<div class="col-md-8">
 							<div class="ma_field panel-body">
-								<div class="col-md-9">
-									<p class="switch-field em_size_field hover_field">
-										<?php if(isset($pf_gallery_settings['image_hover_effect_type'])) $image_hover_effect_type = $pf_gallery_settings['image_hover_effect_type']; else $image_hover_effect_type = "sg"; ?>
-										<input type="radio" name="image_hover_effect_type" id="image_hover_effect_type1" value="no" <?php if($image_hover_effect_type == "no") echo "checked=checked"; ?>>
-										<label for="image_hover_effect_type1"><?php _e('None', 'portfolio-filter-gallery'); ?></label>
-										<input type="radio" name="image_hover_effect_type" id="image_hover_effect_type2" value="sg" <?php if($image_hover_effect_type == "sg") echo "checked=checked"; ?>>
-										<label for="image_hover_effect_type2"><?php _e('Shadow', 'portfolio-filter-gallery'); ?></label>
-									</p>
-								</div>
 								<!-- 2d -->
 								<div class="he_four">
 									<?php if(isset($pf_gallery_settings['image_hover_effect_four'])) $image_hover_effect_four = $pf_gallery_settings['image_hover_effect_four']; else $image_hover_effect_four = "hvr-grow-shadow"; ?>
 									<select name="image_hover_effect_four" id="image_hover_effect_four" class="selectbox_settings">
-										<optgroup label="Shadow and Glow Transitions Effects" class="sg">
-											<option value="hvr-grow-shadow" <?php if($image_hover_effect_four == "hvr-grow-shadow") echo "selected=selected"; ?>><?php _e('Grow Shadow', 'portfolio-filter-gallery'); ?></option>
-											<option value="hvr-float-shadow" <?php if($image_hover_effect_four == "hvr-float-shadow") echo "selected=selected"; ?>><?php _e('Float Shadow', 'portfolio-filter-gallery'); ?></option>
-											<option value="hvr-glow" <?php if($image_hover_effect_four == "hvr-glow") echo "selected=selected"; ?>><?php _e('Glow', 'portfolio-filter-gallery'); ?></option>
-											<option value="hvr-box-shadow-outset" <?php if($image_hover_effect_four == "hvr-box-shadow-outset") echo "selected=selected"; ?>><?php _e('Box Shadow Outset', 'portfolio-filter-gallery'); ?></option>
-											<option value="hvr-box-shadow-inset" <?php if($image_hover_effect_four == "hvr-box-shadow-inset") echo "selected=selected"; ?>><?php _e('Box Shadow Inset', 'portfolio-filter-gallery'); ?></option>
-										</optgroup>
+										<option value="none" <?php if($image_hover_effect_four == "none") echo "selected=selected"; ?>><?php _e('None', 'portfolio-filter-gallery'); ?></option>
+										<option value="hvr-grow-shadow" <?php if($image_hover_effect_four == "hvr-grow-shadow") echo "selected=selected"; ?>><?php _e('Grow Shadow', 'portfolio-filter-gallery'); ?></option>
+										<option value="hvr-float-shadow" <?php if($image_hover_effect_four == "hvr-float-shadow") echo "selected=selected"; ?>><?php _e('Float Shadow', 'portfolio-filter-gallery'); ?></option>
+										<option value="hvr-glow" <?php if($image_hover_effect_four == "hvr-glow") echo "selected=selected"; ?>><?php _e('Glow', 'portfolio-filter-gallery'); ?></option>
+										<option value="hvr-box-shadow-outset" <?php if($image_hover_effect_four == "hvr-box-shadow-outset") echo "selected=selected"; ?>><?php _e('Box Shadow Outset', 'portfolio-filter-gallery'); ?></option>
+										<option value="hvr-box-shadow-inset" <?php if($image_hover_effect_four == "hvr-box-shadow-inset") echo "selected=selected"; ?>><?php _e('Box Shadow Inset', 'portfolio-filter-gallery'); ?></option>
 									</select>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--Thumbnail seting-->
 					<div class="row">
 						<div class="col-md-4">
 							<div class="ma_field_discription">
-								<h4><?php _e('Title & discription On Thumbnail', 'portfolio-filter-gallery'); ?></h4>
-								<p><?php _e('Title & discription On Thumbnail', 'portfolio-filter-gallery'); ?></p> 
+								<h4><?php _e('Thumbanail Border', 'portfolio-filter-gallery'); ?></h4>
+								<p><?php _e('You can remove image border', 'portfolio-filter-gallery'); ?></p> 
 							</div>
 						</div>
 						<div class="col-md-8">
 							<div class="ma_field panel-body">
 								<p class="switch-field em_size_field">
-									<?php if(isset($pf_gallery_settings['title_thumb'])) $title_thumb = $pf_gallery_settings['title_thumb']; else $title_thumb = "show"; ?>
-									<input type="radio" name="title_thumb" id="title_thumb1" value="show" <?php if($title_thumb == "show") echo "checked=checked"; ?>>
-									<label for="title_thumb1"><?php _e('Show', 'portfolio-filter-gallery'); ?></label>
-									<input type="radio" name="title_thumb" id="title_thumb2" value="hide" <?php if($title_thumb == "hide") echo "checked=checked"; ?>>
-									<label for="title_thumb2"><?php _e('Hide', 'portfolio-filter-gallery'); ?></label>
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-4">
-							<div class="ma_field_discription">
-								<h4><?php _e('Show Numbering On Thumbnails', 'portfolio-filter-gallery'); ?></h4>
-								<p><?php _e('Show Numbering On Thumbnails', 'portfolio-filter-gallery'); ?></p> 
-							</div>
-						</div>
-						<div class="col-md-8">
-							<div class="ma_field panel-body">
-								<p class="switch-field em_size_field">
-									<?php if(isset($pf_gallery_settings['image_numbering'])) $image_numbering = $pf_gallery_settings['image_numbering']; else $image_numbering = "0"; ?>
-									<input type="radio" name="image_numbering" id="image_numbering1" value="1" <?php if($image_numbering == 1) echo "checked=checked"; ?>>
-									<label for="image_numbering1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
-									<input type="radio" name="image_numbering" id="image_numbering2" value="0" <?php if($image_numbering == 0) echo "checked=checked"; ?>>
-									<label for="image_numbering2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
+									<?php if(isset($pf_gallery_settings['thumb_border'])) $thumb_border = $pf_gallery_settings['thumb_border']; else $thumb_border = "yes"; ?>
+									<input type="radio" name="thumb_border" id="thumb_border1" value="yes" <?php if($thumb_border == "yes") echo "checked=checked"; ?>>
+									<label for="thumb_border1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
+									<input type="radio" name="thumb_border" id="thumb_border2" value="no" <?php if($thumb_border == "no") echo "checked=checked"; ?>>
+									<label for="thumb_border2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
 								</p>
 							</div>
 						</div>
@@ -343,7 +336,7 @@ echo "</pre>"; */
 						<div class="col-md-4">
 							<div class="ma_field_discription">
 								<h4><?php _e('Hide Thumbnails Spacing', 'portfolio-filter-gallery'); ?></h4>
-								<p> <?php _e('Hide Thumbnails Spacing', 'portfolio-filter-gallery'); ?></p> 
+								<p> <?php _e('You can remove thumbnails spacing', 'portfolio-filter-gallery'); ?></p> 
 							</div>
 						</div>
 						<div class="col-md-8">
@@ -358,13 +351,51 @@ echo "</pre>"; */
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="ma_field_discription">
+								<h4><?php _e('Title On Thumbnail', 'portfolio-filter-gallery'); ?></h4>
+								<p><?php _e('Title on thumbnail', 'portfolio-filter-gallery'); ?></p> 
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="ma_field panel-body">
+								<p class="switch-field em_size_field">
+									<?php if(isset($pf_gallery_settings['title_thumb'])) $title_thumb = $pf_gallery_settings['title_thumb']; else $title_thumb = "show"; ?>
+									<input type="radio" name="title_thumb" id="title_thumb1" value="show" <?php if($title_thumb == "show") echo "checked=checked"; ?>>
+									<label for="title_thumb1"><?php _e('Show', 'portfolio-filter-gallery'); ?></label>
+									<input type="radio" name="title_thumb" id="title_thumb2" value="hide" <?php if($title_thumb == "hide") echo "checked=checked"; ?>>
+									<label for="title_thumb2"><?php _e('Hide', 'portfolio-filter-gallery'); ?></label>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="ma_field_discription">
+								<h4><?php _e('Show Numbering On Thumbnails', 'portfolio-filter-gallery'); ?></h4>
+								<p><?php _e('Show numbering on thumbnails', 'portfolio-filter-gallery'); ?></p> 
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="ma_field panel-body">
+								<p class="switch-field em_size_field">
+									<?php if(isset($pf_gallery_settings['image_numbering'])) $image_numbering = $pf_gallery_settings['image_numbering']; else $image_numbering = "0"; ?>
+									<input type="radio" name="image_numbering" id="image_numbering1" value="1" <?php if($image_numbering == 1) echo "checked=checked"; ?>>
+									<label for="image_numbering1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
+									<input type="radio" name="image_numbering" id="image_numbering2" value="0" <?php if($image_numbering == 0) echo "checked=checked"; ?>>
+									<label for="image_numbering2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!--URL Gray Scale-->
 				<div class="row">
 					<div class="col-md-4">
 						<div class="ma_field_discription">
 							<h4><?php _e('Image Gray Scale (Gray Effect)', 'portfolio-filter-gallery'); ?></h4>
-							<p> <?php _e('Image Gray Scale (Gray Effect)', 'portfolio-filter-gallery'); ?></p> 
+							<p> <?php _e('Image gray scale', 'portfolio-filter-gallery'); ?></p> 
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -379,35 +410,77 @@ echo "</pre>"; */
 						</div>
 					</div>
 				</div>
+				<!--Sort by title-->
 				<div class="row">
 					<div class="col-md-4">
 						<div class="ma_field_discription">
-							<h4><?php _e('Open Image Link URL', 'portfolio-filter-gallery'); ?></h4>
-							<p> <?php _e('Open Image Link URL', 'portfolio-filter-gallery'); ?></p> 
+							<h4><?php _e('Image Sort by Title', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('Image sort by title', 'portfolio-filter-gallery'); ?></p> 
 						</div>
 					</div>
 					<div class="col-md-8">
 						<div class="ma_field panel-body">
+							<p class="switch-field em_size_field">		
+								<?php if(isset($pf_gallery_settings['sort_by_title'])) $sort_by_title = $pf_gallery_settings['sort_by_title']; else $sort_by_title = "no"; ?>
+								<input type="radio" name="sort_by_title" id="sort_by_title1" value="asc" <?php if($sort_by_title == "asc") echo "checked=checked"; ?>>
+								<label for="sort_by_title1"><?php _e('ASC', 'portfolio-filter-gallery'); ?></label>
+								<input type="radio" name="sort_by_title" id="sort_by_title2" value="desc" <?php if($sort_by_title == "desc") echo "checked=checked"; ?>>
+								<label for="sort_by_title2"><?php _e('DESC', 'portfolio-filter-gallery'); ?></label>
+								<input type="radio" name="sort_by_title" id="sort_by_title3" value="no" <?php if($sort_by_title == "no") echo "checked=checked"; ?>>
+								<label for="sort_by_title3"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
+							<h4><?php _e('Open Image Link URL', 'portfolio-filter-gallery'); ?></h4>
+							<p> <?php _e('Open image link URL', 'portfolio-filter-gallery'); ?></p> 
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class=" panel-body">
 							<p class="switch-field em_size_field hover_field">		
 								<?php if(isset($pf_gallery_settings['url_target'])) $url_target = $pf_gallery_settings['url_target']; else $url_target = "_blank"; ?>
 								<input type="radio" name="url_target" id="url_target1" value="_blank" <?php if($url_target == "_blank") echo "checked=checked"; ?>>
-								<label for="url_target1"><?php _e('Into New Tab', 'portfolio-filter-gallery'); ?></label>
+								<label for="url_target1"><?php _e('New Tab', 'portfolio-filter-gallery'); ?></label>
 								<input type="radio" name="url_target" id="url_target2" value="_self" <?php if($url_target == "_self") echo "checked=checked"; ?>>
-								<label for="url_target2"><?php _e('Into Same Tab', 'portfolio-filter-gallery'); ?></label>
+								<label for="url_target2"><?php _e('Same Tab', 'portfolio-filter-gallery'); ?></label>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
+							<h4><?php _e('Disable Bootstrap JS for Output', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('You can disable bootstrap js for output if you have problem with it.', 'portfolio-filter-gallery'); ?></p> 
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="ma_field panel-body">
+							<p class="switch-field em_size_field">
+								<?php if(isset($pf_gallery_settings['bootstrap_disable'])) $bootstrap_disable = $pf_gallery_settings['bootstrap_disable']; else $bootstrap_disable = "no"; ?>
+								<input type="radio" name="bootstrap_disable" id="bootstrap_disable1" value="yes" <?php if($bootstrap_disable == "yes") echo "checked=checked"; ?>>
+								<label for="bootstrap_disable1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
+								<input type="radio" name="bootstrap_disable" id="bootstrap_disable2" value="no" <?php if($bootstrap_disable == "no") echo "checked=checked"; ?>>
+								<label for="bootstrap_disable2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="bhoechie-tab-content">
-				<h1><?php _e('Filters And Sorting controls Settings', 'portfolio-filter-gallery'); ?></h1>
+				<h1><?php _e('Filters Settings', 'portfolio-filter-gallery'); ?></h1>
 				<hr>
 				
 				<!-- FIlters-->
 				<div class="row">
 					<div class="col-md-4">
 						<div class="ma_field_discription">
-							<h4><?php _e('Hide filters', 'portfolio-filter-gallery'); ?></h4>
+							<h4><?php _e('Hide Filters', 'portfolio-filter-gallery'); ?></h4>
 							<p><?php _e('Hide filters', 'portfolio-filter-gallery'); ?></p> 
 						</div>
 					</div>
@@ -426,8 +499,81 @@ echo "</pre>"; */
 				<div class="row">
 					<div class="col-md-4">
 						<div class="ma_field_discription">
+							<h4><?php _e('Text For "All" Filter', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('Text for "All" filter', 'portfolio-filter-gallery'); ?></p>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="ma_field panel-body">
+							<?php if(isset($pf_gallery_settings['all_txt'])) $all_txt = $pf_gallery_settings['all_txt']; else $all_txt = 'All'; ?>
+							<input type="text" class="selectbox_settings sort" id="all_txt" name="all_txt" value="<?php echo $all_txt; ?>">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
+							<h4><?php _e('Sort Filter In Alphabatic Order', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('Sort filter in alphabatic order', 'portfolio-filter-gallery'); ?></p>
+						</div>
+					</div>
+					<div class="col-md-8">
+						
+						<div class="ma_field panel-body">
+							<?php if(isset($pf_gallery_settings['sort_filter_order'])) $sort_filter_order = $pf_gallery_settings['sort_filter_order']; else $sort_filter_order = 0; ?>
+							<p class="switch-field em_size_field">
+							<input type="radio" name="sort_filter_order" id="sort_filter_order1" value="1" <?php if($sort_filter_order == 1) echo "checked=checked"; ?>>
+							<label for="sort_filter_order1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
+							<input type="radio" name="sort_filter_order" id="sort_filter_order2" value="0" <?php if($sort_filter_order == 0) echo "checked=checked"; ?>>
+							<label for="sort_filter_order2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
+							<h4><?php _e('Filters Position', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('Choose filters position', 'portfolio-filter-gallery'); ?></p> 
+						</div>
+					</div>
+					<div class="col-md-8 ">
+						<div class="ma_field panel-body">
+							<?php if(isset($pf_gallery_settings['filter_position'])) $filter_position = $pf_gallery_settings['filter_position']; else $filter_position = "center"; ?>
+							<select id="filter_position" name="filter_position" class="selectbox_settings form-control">
+								<option value="right" <?php if($filter_position == "right") echo "selected=selected"; ?>> <?php _e('Right', 'portfolio-filter-gallery'); ?></option>
+								<option value="center" <?php if($filter_position == "center") echo "selected=selected"; ?>> <?php _e('Center', 'portfolio-filter-gallery'); ?></option>
+								<option value="left" <?php if($filter_position == "left") echo "selected=selected"; ?>> <?php _e('Left', 'portfolio-filter-gallery'); ?></option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
+							<h4><?php _e('Search Box', 'portfolio-filter-gallery'); ?></h4>
+							<p><?php _e('Show search', 'portfolio-filter-gallery'); ?></p> 
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="ma_field panel-body">
+							<p class="switch-field em_size_field">
+							<?php if(isset($pf_gallery_settings['search_box'])) $search_box = $pf_gallery_settings['search_box']; else $search_box = 1; ?>
+							<input type="radio" name="search_box" id="search_box1" value="1" <?php if($search_box == 1) echo "checked=checked"; ?>>
+							<label for="search_box1"><?php _e('Yes', 'portfolio-filter-gallery'); ?></label>
+							<input type="radio" name="search_box" id="search_box2" value="0" <?php if($search_box == 0) echo "checked=checked"; ?>>
+							<label for="search_box2"><?php _e('No', 'portfolio-filter-gallery'); ?></label>
+							</p>
+							<?php if(isset($pf_gallery_settings['search_txt'])) $search_txt = $pf_gallery_settings['search_txt']; else $search_txt = 'Search Images'; ?>
+							<input type="text" class="selectbox_settings sort" id="search_txt" name="search_txt" value="<?php echo $search_txt; ?>">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ma_field_discription">
 							<h4><?php _e('Filter Background Color', 'portfolio-filter-gallery'); ?></h4>
-							<p><?php _e('Filter Background Color', 'portfolio-filter-gallery'); ?> </p> 
+							<p><?php _e('Filter background color', 'portfolio-filter-gallery'); ?> </p> 
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -441,7 +587,7 @@ echo "</pre>"; */
 					<div class="col-md-4">
 						<div class="ma_field_discription">
 							<h4><?php _e('Filter Title Color', 'portfolio-filter-gallery'); ?></h4>
-							<p><?php _e('Filter Title Color', 'portfolio-filter-gallery'); ?> </p> 
+							<p><?php _e('Filter title color', 'portfolio-filter-gallery'); ?> </p> 
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -460,7 +606,7 @@ echo "</pre>"; */
 					<div class="col-md-4">
 						<div class="ma_field_discription">
 							<h4><?php _e('Enable Lightbox', 'portfolio-filter-gallery'); ?></h4>
-							<p><?php _e('Enable or desable lightbox for gallery', 'portfolio-filter-gallery'); ?> </p> 
+							<p><?php _e('You can change or disable lightbox for gallery', 'portfolio-filter-gallery'); ?> </p> 
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -470,7 +616,7 @@ echo "</pre>"; */
 								<?php if(isset($pf_gallery_settings['light-box'])) $light_box = $pf_gallery_settings['light-box']; else $light_box = 5; ?>
 								<select name="light-box" id="light-box" class="selectbox_settings form-control">	
 									<option value="0" <?php if($light_box == 0) echo "selected=selected"; ?>><?php _e('None', 'portfolio-filter-gallery'); ?></option>
-									<option value="5" <?php if($light_box == 5) echo "selected=selected"; ?>><?php _e('Bootstrap 3 Light Box', 'portfolio-filter-gallery'); ?></option>
+									<option value="5" <?php if($light_box == 5) echo "selected=selected"; ?>><?php _e('Bootstrap Light Box', 'portfolio-filter-gallery'); ?></option>
 									<option value="4" <?php if($light_box == 4) echo "selected=selected"; ?>><?php _e('LD Light Box'); ?></option>
 								</select>
 							</div>
@@ -584,149 +730,7 @@ echo "</pre>"; */
 	wp_nonce_field( 'pfg_save_settings', 'pfg_save_nonce' );
 ?>
 <script>
-var pw_gallery_wall = jQuery('[name=pw_gallery_wall]:checked').val();
-if(pw_gallery_wall == 'photo_wall') {
-	jQuery('.photo_wall').addClass("tab-active");
-	jQuery("div.insta_wall").removeClass("tab-active");
-	jQuery("div.flickr_wall").removeClass("tab-active");
-	jQuery('.gallery-content-photo-wall').css("display", "block");
-	jQuery('.gallery-content-insta-wall').css("display", "none");
-	jQuery('.gallery-content-flickr-wall').css("display", "none");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "block");
-	jQuery('#instaram-gallery').css("display", "none");
-	jQuery('#flickr-gallery').css("display", "none");
-	//instagram configration 
-	jQuery('#instagram-configration').css("display", "none");
-}
-
-if(pw_gallery_wall == 'insta_wall') {
-	jQuery('.insta_wall').addClass("tab-active");
-	jQuery("div.photo_wall").removeClass("tab-active");
-	jQuery("div.flickr_wall").removeClass("tab-active");
-	 jQuery('.gallery-content-photo-wall').css("display", "none");
-	jQuery('.gallery-content-insta-wall').css("display", "block");
-	jQuery('.gallery-content-flickr-wall').css("display", "none");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "none");
-	jQuery('#instaram-gallery').css("display", "block");
-	jQuery('#flickr-gallery').css("display", "none");
-	//instagram configration 
-	jQuery('#instagram-configration').css("display", "block");
-}
-	
-if(pw_gallery_wall == 'flickr_wall') {
-	jQuery('.flickr_wall').addClass("tab-active");
-	jQuery("div.photo_wall").removeClass("tab-active");
-	jQuery("div.insta_wall").removeClass("tab-active");
-	jQuery('.gallery-content-photo-wall').css("display", "none");
-	jQuery('.gallery-content-insta-wall').css("display", "none");
-	jQuery('.gallery-content-flickr-wall').css("display", "block");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "none");
-	jQuery('#instaram-gallery').css("display", "none");
-	jQuery('#flickr-gallery').css("display", "block");
-	//instagram configration 
-	jQuery('#instagram-configration').css("display", "none");
-}
-	
-var pwselectedlayout = jQuery('[name=pfg_theme]:checked').val();
-if(pwselectedlayout == 'pfg_theme1') {
-	jQuery('.gallery_layout_grid').addClass('gallery_layout'); 
-	//hide show configuration setting according gallery layout
-	//jQuery('.pw_grid_layout_config').show(); 
-	jQuery('.pw_masonry_mosaic_justify_layout_config').hide();
-} else {
-	jQuery('.gallery_layout_grid').removeClass('gallery_layout');
-	//jQuery('.pw_masonry_mosaic_justify_layout_config').show(); 			
-}
-	
-if(pwselectedlayout == 'pfg_theme2') {
-	jQuery('.gallery_layout_masonry').addClass('gallery_layout'); 
-	//hide show configuration setting according gallery layout
-	//jQuery('.pw_grid_layout_config').hide(); 
-	jQuery('.pw_masonry_mosaic_justify_layout_config').show(); 
-	
-} else {
-	jQuery('.gallery_layout_masonry').removeClass('gallery_layout'); 
-}
-
-var pw_load_more = jQuery('[name=pw_load_more]:checked').val();
-if(pw_load_more == 'yes') {
-	jQuery('.load_limit').show();
-} else {
-	jQuery('.load_limit').hide();
-}
-	
-var pw_gallery_wall = jQuery('[name=pw_gallery_wall]:checked').val();
-if(pw_gallery_wall == 'photo_wall') {
-	jQuery('.photo_wall').addClass("tab-active");
-	jQuery("div.insta_wall").removeClass("tab-active");
-	jQuery("div.flickr_wall").removeClass("tab-active");
-	jQuery('.gallery-content-photo-wall').css("display", "block");
-	jQuery('.gallery-content-insta-wall').css("display", "none");
-	jQuery('.gallery-content-flickr-wall').css("display", "none");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "block");
-	jQuery('#instaram-gallery').css("display", "none");
-	jQuery('#flickr-gallery').css("display", "none");
-	//instagram configuration 
-	jQuery('#instagram-configration').css("display", "none");
-}
-
-if(pw_gallery_wall == 'insta_wall') {
-	jQuery('.insta_wall').addClass("tab-active");
-	jQuery("div.photo_wall").removeClass("tab-active");
-	jQuery("div.flickr_wall").removeClass("tab-active");
-	 jQuery('.gallery-content-photo-wall').css("display", "none");
-	jQuery('.gallery-content-insta-wall').css("display", "block");
-	jQuery('.gallery-content-flickr-wall').css("display", "none");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "none");
-	jQuery('#instaram-gallery').css("display", "block");
-	jQuery('#flickr-gallery').css("display", "none");
-	//instagram configuration 
-	jQuery('#instagram-configration').css("display", "block");
-}
-
-if(pw_gallery_wall == 'flickr_wall') {
-	jQuery('.flickr_wall').addClass("tab-active");
-	jQuery("div.photo_wall").removeClass("tab-active");
-	jQuery("div.insta_wall").removeClass("tab-active");
-	jQuery('.gallery-content-photo-wall').css("display", "none");
-	jQuery('.gallery-content-insta-wall').css("display", "none");
-	jQuery('.gallery-content-flickr-wall').css("display", "block");
-	// upload photos change
-	jQuery('#image-gallery').css("display", "none");
-	jQuery('#instaram-gallery').css("display", "none");
-	jQuery('#flickr-gallery').css("display", "block");
-	//instagram configuration 
-	jQuery('#instagram-configration').css("display", "none");
-}
-	
 jQuery(document).ready(function() {
-	jQuery('input[type=radio][name=pfg_theme]').change(function() {
-		var pwselectedlayout = jQuery('[name=pfg_theme]:checked').val();
-		if(pwselectedlayout == 'pfg_theme1') {
-			jQuery('.gallery_layout_grid').addClass('gallery_layout');
-			//hide show configuration setting according gallery layout
-			//jQuery('.pw_grid_layout_config').show(); 
-			jQuery('.pw_masonry_mosaic_justify_layout_config').hide(); 
-				
-		} else {
-			jQuery('.gallery_layout_grid').removeClass('gallery_layout'); 
-		}
-		
-		if(pwselectedlayout == 'pfg_theme2') {
-			jQuery('.gallery_layout_masonry').addClass('gallery_layout'); 
-			//hide show configuration setting according gallery layout
-			//jQuery('.pw_grid_layout_config').hide(); 
-			jQuery('.pw_masonry_mosaic_justify_layout_config').show(); 
-		} else {
-			jQuery('.gallery_layout_masonry').removeClass('gallery_layout'); 
-		}
-			
-	});
 	
 	// tab
     jQuery("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
@@ -737,64 +741,6 @@ jQuery(document).ready(function() {
         jQuery("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
         jQuery("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
-	
-	//load more hide show
-	jQuery('input[type=radio][name=pw_load_more]').change(function() {
-	var pw_load_more = jQuery('[name=pw_load_more]:checked').val();
-		if(pw_load_more == 'yes') {
-			jQuery('.load_limit').show();
-		} else {
-			jQuery('.load_limit').hide();
-		}
-	});
-		
-	jQuery('input[type=radio][name=pw_gallery_wall]').change(function() {
-		var pw_gallery_wall = jQuery('[name=pw_gallery_wall]:checked').val();
-		if(pw_gallery_wall == 'photo_wall') {
-			jQuery('.photo_wall').addClass("tab-active");
-			jQuery("div.insta_wall").removeClass("tab-active");
-			jQuery("div.flickr_wall").removeClass("tab-active");
-			jQuery('.gallery-content-photo-wall').css("display", "block");
-			jQuery('.gallery-content-insta-wall').css("display", "none");
-			jQuery('.gallery-content-flickr-wall').css("display", "none");
-			// upload photos change
-			jQuery('#image-gallery').css("display", "block");
-			jQuery('#instaram-gallery').css("display", "none");
-			jQuery('#flickr-gallery').css("display", "none");
-			//instagram configuration 
-			jQuery('#instagram-configration').css("display", "none");
-		}
-		
-		if(pw_gallery_wall == 'insta_wall') {
-			jQuery('.insta_wall').addClass("tab-active");
-			jQuery("div.photo_wall").removeClass("tab-active");
-			jQuery("div.flickr_wall").removeClass("tab-active");
-			jQuery('.gallery-content-photo-wall').css("display", "none");
-			jQuery('.gallery-content-insta-wall').css("display", "block");
-			jQuery('.gallery-content-flickr-wall').css("display", "none");
-			// upload photos change
-			jQuery('#image-gallery').css("display", "none");
-			jQuery('#instaram-gallery').css("display", "block");
-			jQuery('#flickr-gallery').css("display", "none");
-			//instagram configuration 
-			jQuery('#instagram-configration').css("display", "block");
-		}
-		
-		if(pw_gallery_wall == 'flickr_wall') {
-			jQuery('.flickr_wall').addClass("tab-active");
-			jQuery("div.photo_wall").removeClass("tab-active");
-			jQuery("div.insta_wall").removeClass("tab-active");
-			jQuery('.gallery-content-photo-wall').css("display", "none");
-			jQuery('.gallery-content-insta-wall').css("display", "none");
-			jQuery('.gallery-content-flickr-wall').css("display", "block");
-			// upload photos change
-			jQuery('#image-gallery').css("display", "none");
-			jQuery('#instaram-gallery').css("display", "none");
-			jQuery('#flickr-gallery').css("display", "block");
-			//instagram configuration 
-			jQuery('#instagram-configration').css("display", "none");
-		}
-	});	
 	
 	
 });
@@ -837,19 +783,12 @@ jQuery(document).ready(function() {
 	(function( jQuery ) {
 		jQuery(function() {
 			// Add Color Picker to all inputs that have 'color-field' class
-			jQuery('#title_color').wpColorPicker();
-			jQuery('#title_color2').wpColorPicker();
-			jQuery('#title_bg_color').wpColorPicker();
-			jQuery('#title_bg_color2').wpColorPicker();
 			jQuery('#border_color').wpColorPicker();
 			jQuery('#border_color2').wpColorPicker();
 			jQuery('#filter_bg').wpColorPicker();
 			jQuery('#filter_title_color').wpColorPicker();
 			jQuery('#filter_titles_color').wpColorPicker();
 			jQuery('#filter_under_line_color').wpColorPicker();
-			
-			jQuery('#sorting_control_color').wpColorPicker();
-			jQuery('#shuffle_bg').wpColorPicker();
 			jQuery('#search_border').wpColorPicker();
 			jQuery('#load_button_color').wpColorPicker();	
 			jQuery('#load_text_color').wpColorPicker();	
@@ -858,87 +797,9 @@ jQuery(document).ready(function() {
 	})( jQuery );
 	
 	jQuery(document).ajaxComplete(function() {
-		jQuery('#title_color,#title_bg_color,#border_color,#filter_bg,#filter_title_color,#sorting_control_color,#shuffle_bg,#search_border,#load_button_color,#load_text_color').wpColorPicker();
+		jQuery('#border_color,#filter_bg,#filter_title_color,#search_border,#load_button_color,#load_text_color').wpColorPicker();
 	});	
-	var effect_type = jQuery('input[name="image_hover_effect_type"]:checked').val();
 	
-	//theme 2 -----------------
-	var pfg_theme = jQuery('input[name="pfg_theme"]:checked').val();
-	var image_hover_effect_theme2 = jQuery('input[name="image_hover_effect_theme2"]:checked').val();
-	if(pfg_theme == "pfg_theme1") {
-		jQuery('.theme1_hover').show();
-		jQuery('.theme2_hover').hide();
-		jQuery('.theme2_filters').hide();
-		jQuery('.theme1_filters').show();
-		jQuery('.theme1_thumb').show();
-		jQuery('.theme2_thumb').hide();
-		jQuery('.theme1_light_box').show();
-		jQuery('.theme2_light_box').hide();
-	}
-	if(pfg_theme == "pfg_theme2") {
-		jQuery('.theme2_hover').show();
-		jQuery('.theme1_hover').hide();
-		jQuery('.theme1_filters').hide();
-		jQuery('.theme2_filters').show();
-		jQuery('.theme2_thumb').show();
-		jQuery('.theme1_thumb').hide();
-		jQuery('.theme2_light_box').show();
-		jQuery('.theme1_light_box').hide();
-		
-		
-	}
-	if(image_hover_effect_theme2 == "no") {
-		jQuery('.he_overlay').hide();
-		jQuery('.he_2d').hide();
-	}
-	if(image_hover_effect_theme2 == "overlay_zoom") {
-		jQuery('.he_overlay').show();
-		jQuery('.he_2d').hide();
-	}
-	if(image_hover_effect_theme2 == "2d") {
-		jQuery('.he_2d').show();
-		jQuery('.he_overlay').hide();
-	}
-	
-	//alert(effect_type);
-	if(effect_type == "no") {
-		jQuery('.he_one').hide();
-		jQuery('.he_four').hide();
-		
-	}
-	
-	if(effect_type == "2d") {
-		jQuery('.he_one').show();
-		jQuery('.he_four').hide();
-	
-		
-	}
-	if(effect_type == "sg") {
-		jQuery('.he_one').hide();
-		jQuery('.he_four').show();
-		
-		
-	}
-	var border_setting = jQuery('input[name="border_hide"]:checked').val();
-	if(border_setting == 1) {
-		jQuery('.border_settings').show();
-		jQuery('.border_ancore').hide();
-	}
-	if(border_setting == 0) {
-		jQuery('.border_settings').hide();
-		jQuery('.border_ancore').show();
-	}
-	
-	var border_setting2 = jQuery('input[name="border_hide2"]:checked').val();
-	if(border_setting2 == 1) {
-		jQuery('.border_settings2').show();
-		jQuery('.border_ancore').hide();
-	}
-	if(border_setting2 == 0) {
-		jQuery('.border_settings2').hide();
-		jQuery('.border_ancore').show();
-	}
-
 	var title_thumbnail = jQuery('input[name="title_thumb"]:checked').val();
 	if(title_thumbnail == "show"){
 		jQuery('.title_set').show();
@@ -958,85 +819,8 @@ jQuery(document).ready(function() {
 		jQuery('.title_ancore').show();
 	}
 	
-	var filter_setting = jQuery('input[name="filter_setting"]:checked').val();
-	if(filter_setting == "open"){
-		jQuery('.filter_set').show();
-		jQuery('.filt_ancore').hide();
-	}
-	if(filter_setting == "close"){
-		jQuery('.filter_set').hide();
-		jQuery('.filt_ancore').show();
-	}
-	
-	
-
-	var pfg_read_more = jQuery('input[name="pfg_read_more"]:checked').val();
-	if(pfg_read_more == "show") {
-		jQuery('.read_more_txt').show();
-	}
-	if(pfg_read_more == "hide") {
-		jQuery('.read_more_txt').hide();
-	}
-	
-	// on load navigation button center hide show
-	var pf_gallery_load_more = jQuery('input[name="pf_gallery_load_more"]:checked').val();
-	if(pf_gallery_load_more == "yes"){
-		jQuery('.lmb').show();		
-	}
-	if(pf_gallery_load_more == "no"){
-		jQuery('.lmb').hide();		
-	}
-	
 	//on change effect
 	jQuery(document).ready(function() {
-		jQuery('input[name="image_hover_effect_type"]').change(function(){
-			var effect_type = jQuery('input[name="image_hover_effect_type"]:checked').val();
-			
-			//alert(effect_type);
-			if(effect_type == "no") {
-				jQuery('.he_one').hide();
-				jQuery('.he_four').hide();
-				jQuery('.he_overlay').hide();
-				
-			}
-			
-			if(effect_type == "2d") {
-				jQuery('.he_one').show();
-				jQuery('.he_four').hide();
-				jQuery('.he_overlay').hide();
-				
-			}
-			if(effect_type == "sg") {
-				jQuery('.he_overlay').hide();
-				jQuery('.he_one').hide();
-				jQuery('.he_four').show();
-				
-			}
-			
-		});
-		jQuery('input[name="border_hide"]').change(function(){
-			var border_setting = jQuery('input[name="border_hide"]:checked').val();
-			if(border_setting == 1) {
-				jQuery('.border_settings').show();
-				jQuery('.border_ancore').hide();
-			}
-			if(border_setting == 0) {
-				jQuery('.border_settings').hide();
-				jQuery('.border_ancore').show();
-			}
-		});
-		
-		jQuery('input[name="border_hide2"]').change(function(){
-			var border_setting2 = jQuery('input[name="border_hide2"]:checked').val();
-			if(border_setting2 == 1) {
-				jQuery('.border_settings2').show();
-				jQuery('.border_ancore').hide();
-			}
-			if(border_setting2 == 0) {
-				jQuery('.border_settings2').hide();
-				jQuery('.border_ancore').show();
-			}
-		});
 		
 		jQuery('input[name="title_thumb"]').change(function() {
 			var title_thumbnail2 = jQuery('input[name="title_thumb"]:checked').val();
@@ -1059,80 +843,6 @@ jQuery(document).ready(function() {
 			if(title_thumbnail == "hide"){
 				jQuery('.title_set2').hide();
 				jQuery('.title_ancore').show();
-			}
-		});
-		
-		jQuery('input[name="filter_setting"]').change(function() {
-			var filter_setting = jQuery('input[name="filter_setting"]:checked').val();
-			if(filter_setting == "open"){
-				jQuery('.filter_set').show();
-				jQuery('.filt_ancore').hide();
-			}
-			if(filter_setting == "close"){
-				jQuery('.filter_set').hide();
-				jQuery('.filt_ancore').show();
-			}
-	
-		});
-		
-		
-		//theme 2
-		jQuery('input[name="pfg_theme"]').change(function(){
-			var pfg_theme = jQuery('input[name="pfg_theme"]:checked').val();
-			if(pfg_theme == "pfg_theme1") {
-				jQuery('.theme1_hover').show();
-				jQuery('.theme2_hover').hide();
-				jQuery('.theme2_filters').hide();
-				jQuery('.theme1_filters').show();
-				jQuery('.theme1_thumb').show();
-				jQuery('.theme2_thumb').hide();
-				jQuery('.theme1_light_box').show();
-				jQuery('.theme2_light_box').hide();
-			}
-			if(pfg_theme == "pfg_theme2") {
-				jQuery('.theme2_hover').show();
-				jQuery('.theme1_hover').hide();
-				jQuery('.theme1_filters').hide();
-				jQuery('.theme2_filters').show();
-				jQuery('.theme2_thumb').show();
-				jQuery('.theme1_thumb').hide();
-				jQuery('.theme2_light_box').show();
-				jQuery('.theme1_light_box').hide();
-			}
-		});
-		jQuery('input[name="image_hover_effect_theme2"]').change(function(){
-			var image_hover_effect_theme2 = jQuery('input[name="image_hover_effect_theme2"]:checked').val();
-			if(image_hover_effect_theme2 == "no") {
-				jQuery('.he_overlay').hide();
-				jQuery('.he_2d').hide();
-			}
-			if(image_hover_effect_theme2 == "overlay_zoom") {
-				jQuery('.he_overlay').show();
-				jQuery('.he_2d').hide();
-			}
-			if(image_hover_effect_theme2 == "2d") {
-				jQuery('.he_2d').show();
-				jQuery('.he_overlay').hide();
-			}
-		});
-		
-		jQuery('input[name="pfg_read_more"]').change(function(){
-			var pfg_read_more = jQuery('input[name="pfg_read_more"]:checked').val();
-			if(pfg_read_more == "show") {
-				jQuery('.read_more_txt').show();
-			}
-			if(pfg_read_more == "hide") {
-				jQuery('.read_more_txt').hide();
-			}
-		});
-		
-		jQuery('input[name="pf_gallery_load_more"]').change(function(){
-			var pf_gallery_load_more = jQuery('input[name="pf_gallery_load_more"]:checked').val();
-			if(pf_gallery_load_more == "yes"){
-				jQuery('.lmb').show();		
-			}
-			if(pf_gallery_load_more == "no"){
-				jQuery('.lmb').hide();		
 			}
 		});
 		

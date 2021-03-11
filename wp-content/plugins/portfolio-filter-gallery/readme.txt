@@ -1,11 +1,11 @@
 ﻿=== Portfolio Gallery - Image Gallery Plugin ===
 Contributors: awordpresslife
-Donate link: https://awplife.com
+Donate link: https://paypal.me/awplife
 Tags: portfolio, gallery, portfolio gallery, responsive, wordpress portfolio plugin
 Requires at least: 3.2
-Tested up to: 5.3.2
+Tested up to: 5.6
 Requires PHP: 5.4
-Stable tag: 1.1.7
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,11 +19,12 @@ The first portfolio plugin in WordPress for a separate category page.
 == Links ==
 
 * [Upgrade To Portfolio Premium](https://awplife.com/wordpress-plugins/portfolio-filter-gallery-wordpress-plugin/)
-* [Live Demo](http://awplife.com/demo/portfolio-filter-gallery-premium/)
+* [Free Live Demo](https://awplife.com/demo/portfolio-filter-gallery-free-wordpress-plugin/)
+* [Premium Live Demo](https://awplife.com/demo/portfolio-filter-gallery-premium/)
 
 = HOW TO USE THE EASIEST PORTFOLIO WITH WORDPRESS =
 
-https://www.youtube.com/watch?v=F5XDZ6blMQE
+https://www.youtube.com/watch?v=6rvJ9NN_kA0
 
 == Features ==
 
@@ -177,6 +178,41 @@ After uploading the images choose the image type = (video) from the select box b
 * Open the post/page you want to display the gallery. Paste your gallery shortcode into text editor and press plublish button to show your gallery or Instagram feed. You can also show the gallery in widget like page or post just paste your shortcode into text widget and your gallery is ready to show.
 
 == Changelog ==
+
+= 1.2.6 =
+* Bug Fixed.
+
+= 1.2.5 =
+* fixed footer column issue.
+
+= 1.2.4 =
+* Portfolio Filter Gallery Video Doc updated in WordPres.org description page
+
+= 1.2.3 =
+* Tasted with WordPress version 5.5
+* Fixed minor bugs.
+
+= 1.2.2 =
+* Fixed All undefine variable bugs.
+* Removed etra Js.
+
+= 1.2.1 =
+* Fixed minor bugs.
+
+= 1.2.0 =
+* Added Gallery direction option.
+* Added option for thumbanail border remove.
+* Added option for sort images by title.
+* Added option for change "All" text.
+* Added option for sort filters alphabatic order.
+* Added search option.
+* Added filter position option.
+* Added Bootstrap js disable option.
+* Free Demo Link Added
+
+= 1.1.8 =
+* Tasted with WordPress version 5.4.2
+* Free Demo Link Added
 
 = 1.1.7 =
 * Fixed issue with anchor tag (hypertext link)

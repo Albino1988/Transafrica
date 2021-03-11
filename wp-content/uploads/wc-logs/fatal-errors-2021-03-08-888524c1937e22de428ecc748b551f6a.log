@@ -1,0 +1,96 @@
+2021-03-08T18:27:02+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T18:27:08+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:01+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:03+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:35+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:36+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:46+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+
+2021-03-08T19:25:56+00:00 CRITICAL Uncaught Error: Maximum function nesting level of '256' reached, aborting! in C:\wamp64\www\Transafrica\wp-includes\plugin.php:139
+Stack trace:
+#0 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2134): has_filter('query', Array)
+#1 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(2154): wpdb->placeholder_escape()
+#2 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1183): wpdb->add_placeholder_escape('11168')
+#3 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1255): wpdb->_real_escape(11168)
+#4 [internal function]: wpdb->escape_by_ref(11168, 0)
+#5 C:\wamp64\www\Transafrica\wp-includes\wp-db.php(1416): array_walk(Array, Array)
+#6 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\includes\utils.php(517): wpdb->prepare('post_parent = %...', Array)
+#7 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\base\document.php(950): Elementor\Utils::get_post_autosave(11168, 1)
+#8 C:\wamp64\www\Transafrica\wp-content\plugins\elementor\core\documents-manager.php(232): Elementor\Core\Base\Document->get_autosave_i in C:\wamp64\www\Transafrica\wp-includes\plugin.php on line 139
+

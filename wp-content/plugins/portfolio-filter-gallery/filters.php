@@ -60,7 +60,7 @@ if(is_array($all_category)){
 							<td><?php echo $n; ?></td>
 							<td id="cat_name" name="cat_name"><?php echo ucwords($value); ?></td>
 							<td>&nbsp;
-								<i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key;?>');"></i>&nbsp;&nbsp;&nbsp;
+								<?php if($key != 0 ) { ?><i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key;?>');"></i><?php } ?>&nbsp;&nbsp;&nbsp;
 								<?php if($key != 0 ) { ?><i class="fa fa-trash cat_icon" id="delete_category" name="delete_category" onclick="return pfg_delete_filter('<?php echo $key;?>');"></i><?php } ?>
 							</td>
 							<td class="text-center">
@@ -208,7 +208,7 @@ if(isset($_POST['action'])){
 										<td><?php echo $n; ?></td>
 										<td id="cat_name" name="cat_name"><?php echo ucwords($value); ?></td>
 										<td>&nbsp;
-											<i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key; ?>');"></i>&nbsp;&nbsp;&nbsp;
+											<?php if($key != 0 ) { ?><i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key; ?>');"></i><?php } ?>&nbsp;&nbsp;&nbsp;
 											<?php if($key != 0 ) { ?><i class="fa fa-trash cat_icon" id="delete_category" name="delete_category" onclick="return pfg_delete_filter('<?php echo $key; ?>');"></i><?php } ?>
 										</td>
 										<td class="text-center">
@@ -305,7 +305,7 @@ if(isset($_POST['action'])){
 								<td><?php echo $n; ?></td>
 								<td id="cat_name" name="cat_name"><?php echo ucwords($value); ?></td>
 								<td>&nbsp;
-									<i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key; ?>');"></i>&nbsp;&nbsp;&nbsp;
+									<?php if($key != 0 ) { ?><i class="fa fa-pencil-square cat_icon" id="update_category" name="update_category"  onclick="return DoAction('edit', '<?php echo $key; ?>');"></i><?php } ?>&nbsp;&nbsp;&nbsp;
 									<?php if($key != 0 ) { ?><i class="fa fa-trash cat_icon" id="delete_category" name="delete_category" onclick="return pfg_delete_filter('<?php echo $key; ?>');"></i><?php } ?>
 								</td>
 								<td class="text-center">

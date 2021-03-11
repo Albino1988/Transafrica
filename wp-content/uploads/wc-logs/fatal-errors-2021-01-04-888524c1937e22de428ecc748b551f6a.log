@@ -1,0 +1,6 @@
+2021-01-04T05:39:05+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\wamp64\www\Transafrica\wp-content\plugins\smart-slider-3\Nextend\SmartSlider3\Platform\WordPress\compat.php on line 5
+
+2021-01-04T05:39:07+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\wamp64\www\Transafrica\wp-content\plugins\smart-slider-3\Nextend\Autoloader.php on line 193
+
+2021-01-04T05:41:34+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\wamp64\www\Transafrica\wp-includes\wp-db.php on line 2056
+

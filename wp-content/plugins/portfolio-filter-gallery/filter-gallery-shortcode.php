@@ -3,11 +3,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 add_shortcode('PFG', 'awl_filter_gallery_shortcode');
 function awl_filter_gallery_shortcode($post_id) {
 	ob_start();
+	
+	//$pf_gallery_settings = unserialize(base64_decode(get_post_meta( $post_id['id'], 'awl_filter_gallery'.$post_id['id'], true)));
+	$pf_gallery_settings = get_post_meta( $post_id['id'], 'awl_filter_gallery'.$post_id['id'], true);
+	$pf_gallery_id = $post_id['id'];
+	
+	if(isset($pf_gallery_settings['bootstrap_disable'])) $bootstrap_disable = $pf_gallery_settings['bootstrap_disable']; else $bootstrap_disable = "no";
+
 
 	//js
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('imagesloaded');
-	wp_enqueue_script('awl-ig-bootstrap-js', PFG_PLUGIN_URL .'js/bootstrap.min.js', array('jquery'), '' , true);
+	if($bootstrap_disable == 'no') {
+		wp_enqueue_script('awl-ig-bootstrap-js', PFG_PLUGIN_URL .'js/bootstrap.min.js', array('jquery'), '' , true);
+	}
 	wp_enqueue_script('awl-ig-controls-js', PFG_PLUGIN_URL .'js/controls.js', array('jquery'), '', false);
 	wp_enqueue_script('awl-ig-filterizr-js', PFG_PLUGIN_URL .'js/jquery.filterizr.js', array('jquery'), '', false);
 	wp_enqueue_script('awl-pfg-YouTubePopUp.jquery-js', PFG_PLUGIN_URL .'js/YouTubePopUp.jquery.js', array('jquery'), '', false);
@@ -18,9 +27,6 @@ function awl_filter_gallery_shortcode($post_id) {
 	wp_enqueue_style('awl-YouTubePopUp-css', PFG_PLUGIN_URL .'css/YouTubePopUp.css');
 	wp_enqueue_style('awl-font-awesome-css', PFG_PLUGIN_URL .'css/font-awesome.min.css');
 	
-	//$pf_gallery_settings = unserialize(base64_decode(get_post_meta( $post_id['id'], 'awl_filter_gallery'.$post_id['id'], true)));
-	$pf_gallery_settings = get_post_meta( $post_id['id'], 'awl_filter_gallery'.$post_id['id'], true);
-	$pf_gallery_id = $post_id['id'];
 
 	//columns settings
 	if(isset($pf_gallery_settings['gal_size'])) $gal_thumb_size = $pf_gallery_settings['gal_size']; else $gal_thumb_size = "full";
@@ -29,6 +35,7 @@ function awl_filter_gallery_shortcode($post_id) {
 	if(isset($pf_gallery_settings['col_tablets'])) $col_tablets = $pf_gallery_settings['col_tablets']; else $col_tablets = "col-sm-4";
 	if(isset($pf_gallery_settings['col_phones'])) $col_phones = $pf_gallery_settings['col_phones']; else $col_phones = "col-xs-6";
 	//image setting
+	if(isset($pf_gallery_settings['gallery_direction'])) $gallery_direction = $pf_gallery_settings['gallery_direction']; else $gallery_direction = "ltr";
 	if(isset($pf_gallery_settings['image_numbering'])) $image_numbering = $pf_gallery_settings['image_numbering']; else $image_numbering = "0";
 	if(isset($pf_gallery_settings['title_thumb'])) $title_thumb = $pf_gallery_settings['title_thumb']; else $title_thumb = "show";
 	
@@ -38,41 +45,64 @@ function awl_filter_gallery_shortcode($post_id) {
 	if(isset($pf_gallery_settings['filter_bg'])) $filter_bg = $pf_gallery_settings['filter_bg']; else $filter_bg = "red";
 	//filter setting for data-filters
 	
-	
 	if(isset($pf_gallery_settings['filters'])) $filters = $pf_gallery_settings['filters']; else  $filters = array();
 	// ligtbox style
 	if(isset($pf_gallery_settings['light-box'])) $light_box = $pf_gallery_settings['light-box']; else $light_box = 1;
 	if(isset($pf_gallery_settings['hide_filters'])) $hide_filters = $pf_gallery_settings['hide_filters']; else $hide_filters = 0;
+	if(isset($pf_gallery_settings['all_txt'])) $all_txt = $pf_gallery_settings['all_txt']; else $all_txt = 'All';
+	if(isset($pf_gallery_settings['sort_filter_order'])) $sort_filter_order = $pf_gallery_settings['sort_filter_order']; else $sort_filter_order = 0;
+	if(isset($pf_gallery_settings['filter_position'])) $filter_position = $pf_gallery_settings['filter_position']; else $filter_position = "center";
+	if(isset($pf_gallery_settings['search_box'])) $search_box = $pf_gallery_settings['search_box']; else $search_box = "";
+	if(isset($pf_gallery_settings['search_txt'])) $search_txt = $pf_gallery_settings['search_txt']; else $search_txt = "";
 	
 	//hover effect
-	if(isset($pf_gallery_settings['image_hover_effect_type'])) $image_hover_effect_type = $pf_gallery_settings['image_hover_effect_type']; else $image_hover_effect_type = "2d";
-	if($image_hover_effect_type == "no") {
-		$image_hover_effect = "";
-	} else {
+	if(isset($pf_gallery_settings['image_hover_effect_four'])) $image_hover_effect = $pf_gallery_settings['image_hover_effect_four']; else $image_hover_effect = "hvr-box-shadow-outset";
+	if($image_hover_effect != "none") {
 		// hover csss
 		wp_enqueue_style('ggp-hover-css', PFG_PLUGIN_URL .'css/hover.css');
 	}
-	if(isset($pf_gallery_settings['url_target'])) $url_target = $pf_gallery_settings['url_target']; else $url_target = "_new";
-	if($image_hover_effect_type == "2d")
-		if(isset($pf_gallery_settings['image_hover_effect_one'])) $image_hover_effect = $pf_gallery_settings['image_hover_effect_one']; else $image_hover_effect = "hvr-buzz";
-	if($image_hover_effect_type == "bg")
-		if(isset($pf_gallery_settings['image-hover-effect-2'])) $image_hover_effect = $pf_gallery_settings['image-hover-effect-2']; else $image_hover_effect = "hvr-bounce-to-top";
-	if($image_hover_effect_type == "br")
-		if(isset($pf_gallery_settings['image-hover-effect-3'])) $image_hover_effect = $pf_gallery_settings['image-hover-effect-3']; else $image_hover_effect = "hvr-ripple-out";
-	if($image_hover_effect_type == "sg")
-		if(isset($pf_gallery_settings['image_hover_effect_four'])) $image_hover_effect = $pf_gallery_settings['image_hover_effect_four']; else $image_hover_effect = "hvr-box-shadow-outset";
-	if($image_hover_effect_type == "cl")
-		if(isset($pf_gallery_settings['image-hover-effect-5'])) $image_hover_effect = $pf_gallery_settings['image-hover-effect-5']; else $image_hover_effect = "hvr-curl-top-left";
-
+	
+	if(isset($pf_gallery_settings['thumb_border'])) $thumb_border = $pf_gallery_settings['thumb_border']; else $thumb_border = "yes";
 	if(isset($pf_gallery_settings['no_spacing'])) $no_spacing = $pf_gallery_settings['no_spacing']; else $no_spacing = 1;
 	if(isset($pf_gallery_settings['gray_scale'])) $gray_scale = $pf_gallery_settings['gray_scale']; else $gray_scale = 0;
 	if(isset($pf_gallery_settings['thumbnail_order'])) $thumbnail_order = $pf_gallery_settings['thumbnail_order']; else $thumbnail_order = "ASC";
+	if(isset($pf_gallery_settings['sort_by_title'])) $sort_by_title = $pf_gallery_settings['sort_by_title']; else $sort_by_title = "no";
 	if(isset($pf_gallery_settings['url_target'])) $url_target = $pf_gallery_settings['url_target']; else $url_target = "_new";
 	if(isset($pf_gallery_settings['filter_title_color'])) $filter_title_color = $pf_gallery_settings['filter_title_color']; else $filter_title_color = "#fff";
+	
 	?>
 	<!-- CSS Part Start From Here-->
 	<style>
-	
+		
+		.portfolio-wraper {
+			<?php if($gallery_direction == 'rtl') { ?>
+				direction:rtl;
+			<?php } ?>
+			margin-bottom:20px;
+		}
+		
+		li#all {
+			margin: 0;
+		}
+		
+		.simplefilter li {
+			margin-top: 5px;
+		}
+		
+		.filtr-search {
+			margin-top:10px !important;
+			width:200px !important;
+			margin-bottom: 20px;
+		}
+		#all-simplefilter {
+			display:inline;
+			padding-left: 0px !important;
+		}
+		#f-simplefilter {
+			display:inline;
+			padding-left: 0px !important;
+		}
+		
 		@keyframes .YouTubePopUp-Content  {
 			from {
 				transform: translate3d(0, 100%, 0);
@@ -140,24 +170,6 @@ function awl_filter_gallery_shortcode($post_id) {
 			top: 2rem !important;
 		}
 		<?php } ?>
-		
-		.item_desc_<?php echo esc_html( $pf_gallery_id ); ?> , .item_position_<?php echo esc_html( $pf_gallery_id ); ?> {
-			<?php if($title_color) { ?>
-			color: <?php echo esc_html($title_color); ?> !important;
-			<?php } ?>
-			<?php if($title_bg_color) { ?>
-			background-color: <?php echo esc_html($title_bg_color); ?> !important;
-			<?php }?>
-
-			<?php if($title_bg_opacity) { ?>
-			opacity : <?php echo esc_html($title_bg_opacity); ?> !important;
-			<?php } ?>
-			
-			<?php if($title_size) { ?>
-			font-size :<?php echo esc_html($title_size); ?>px !important;
-			<?php } ?>			 
-		}
-		
 		<?php if($gray_scale){ ?>
 		.filtr_item_<?php echo esc_html( $pf_gallery_id ); ?> img {
 			filter: grayscale(70%);
@@ -177,19 +189,6 @@ function awl_filter_gallery_shortcode($post_id) {
 		
 		.simplefilter_<?php echo esc_html( $pf_gallery_id ); ?> li.active {
 			background-color: <?php echo esc_html($filter_bg); ?> !important;
-		}
-		
-		.sortandshuffle_<?php echo esc_html( $pf_gallery_id ); ?> .sort_btn_<?php echo esc_html( $pf_gallery_id ); ?> {
-				<?php if($sorting_control_color){ ?>
-				background-color:<?php echo esc_html($sorting_control_color); ?> !important;
-			<?php } ?>
-		} 
-		
-		.sortandshuffle_<?php echo esc_html( $pf_gallery_id ); ?> .shuffle_btn_<?php echo esc_html( $pf_gallery_id ); ?> {
-			<?php if($shuffle_bg){ ?>
-			
-				background-color:<?php echo esc_html($shuffle_bg["H"]); ?> !important;
-			<?php } ?>
 		}
 		
 		<?php echo $custom_css; ?>

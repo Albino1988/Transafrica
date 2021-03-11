@@ -7,10 +7,10 @@
 	<div style="text-align:center; border: solid 2px red; padding: 50px; margin:20px;">
 		<h1 style="color:red;"><strong>!!! IMPORTANT NOTICE !!!</strong></h1>
 		<h1 style="color:blue;">Update Plugin Settings from Old Version to Latest Version</h1>
-		<p>Due to security reason we have updated plugin settings code according to WordPress guideline.</p>
-		<p>Users those using the plugin version 1.0.7 or Old once, need to hit the below button to update previously saved setting according to latest plugin.</p>
-		<p>It will prevent you to loose your previouly created galleries and settings.</p>
-		<p>This procees will be run one time to update all you galleries setting and recover them accordingly to new plugin code.</p>
+		<p>Due to security reasons, we have updated the plugin settings code according to WordPress guidelines.</p>
+		<p>Users those using the plugin version 1.0.7 or Old once, need to hit the below button to update previously saved setting according to the latest plugin.</p>
+		<p>It will prevent you to lose your previously created galleries and settings.</p>
+		<p>This process will be run one time to update all your galleries setting and recover them accordingly to the new plugin code.</p>
 		<h2 style="color:red;"><strong>If you have already updated the setting please ignore this process.<strong></h2>
 		<form action="" method="post">
 			<input type="hidden" value="pfg-update" name="update_settings_action" id="update_settings_action">
@@ -18,7 +18,7 @@
 			<?php wp_nonce_field( 'pfg_update_old_settings', 'pfg_update_old_settings_nonce' ); ?>
 		</form>
 		<h3>OR</h3>
-		<p><strong>If you are a new user and using plugin version 1.1.1 or latest, then hit the below button to hide the notice.</p>
+		<p><strong>If you are a new user and using plugin version 1.1.1 or the latest, then hit the below button to hide the notice.</p>
 		<form action="" method="post">
 			<input type="hidden" value="pfg-hide-notice" name="pfg_hide_notice" id="pfg_hide_notice">
 			<input type="submit" value="I Am New User Hide This Notice For Me" name="hide_notice" id="hide_notice" class="button button-primary button-hero">

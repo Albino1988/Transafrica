@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 Plugin Name: Portfolio Filter Gallery
 Plugin URI: http://awplife.com/
 Description: Portfolio Filter Gallery For WordPress.
-Version: 1.1.7
+Version: 1.2.6
 Author: A WP Life
 Author URI: http://awplife.com/
 License: GPLv2 or later
@@ -23,7 +23,7 @@ if ( ! class_exists( 'Awl_Portfolio_Filter_Gallery' ) ) {
 		
 		protected function _constants() {
 			//Plugin Version
-			define( 'PFG_PLUGIN_VER', '1.1.7' );
+			define( 'PFG_PLUGIN_VER', '1.2.6' );
 			
 			//Plugin Name
 			define( 'PFG_PLUGIN_NAME', __( 'Portfolio Filter Gallery', 'portfolio-filter-gallery' ) );
@@ -355,7 +355,6 @@ if ( ! class_exists( 'Awl_Portfolio_Filter_Gallery' ) ) {
 				   print 'Sorry, your nonce did not verify.';
 				   exit;
 				
-				
 				} else {
 				
 					$gal_size 					= sanitize_text_field($_POST['gal_size']);
@@ -363,17 +362,26 @@ if ( ! class_exists( 'Awl_Portfolio_Filter_Gallery' ) ) {
 					$col_desktops 				= sanitize_text_field($_POST['col_desktops']);
 					$col_tablets 				= sanitize_text_field($_POST['col_tablets']);
 					$col_phones 				= sanitize_text_field($_POST['col_phones']);
+					$gallery_direction 			= sanitize_text_field($_POST['gallery_direction']);
 					$image_hover_effect_type	= sanitize_text_field($_POST['image_hover_effect_type']);
 					$image_hover_effect_four	= sanitize_text_field($_POST['image_hover_effect_four']);
 					$title_thumb				= sanitize_text_field($_POST['title_thumb']);
 					$image_numbering			= sanitize_text_field($_POST['image_numbering']);
+					$thumb_border				= sanitize_text_field($_POST['thumb_border']);
 					$no_spacing					= sanitize_text_field($_POST['no_spacing']);
 					$gray_scale					= sanitize_text_field($_POST['gray_scale']);
+					$sort_by_title				= sanitize_text_field($_POST['sort_by_title']);
 					$url_target					= sanitize_text_field($_POST['url_target']);
 					$filter_bg					= sanitize_text_field($_POST['filter_bg']);
 					$filter_title_color			= sanitize_text_field($_POST['filter_title_color']);
 					$light_box					= sanitize_text_field($_POST['light-box']);
 					$hide_filters				= sanitize_text_field($_POST['hide_filters']);
+					$all_txt					= sanitize_text_field($_POST['all_txt']);
+					$sort_filter_order			= sanitize_text_field($_POST['sort_filter_order']);
+					$filter_position			= sanitize_text_field($_POST['filter_position']);
+					$search_box					= sanitize_text_field($_POST['search_box']);
+					$search_txt					= sanitize_text_field($_POST['search_txt']);
+					$bootstrap_disable			= sanitize_text_field($_POST['bootstrap_disable']);
 					if(isset($_POST['custom-css'] )) {
 						$custom_css = $_POST['custom-css'];
 					} else {
@@ -427,17 +435,26 @@ if ( ! class_exists( 'Awl_Portfolio_Filter_Gallery' ) ) {
 						'col_desktops' 			   			=> $col_desktops,
 						'col_tablets'						=> $col_tablets,
 						'col_phones' 						=> $col_phones,
+						'gallery_direction' 				=> $gallery_direction,
 						'image_hover_effect_type'			=> $image_hover_effect_type,
 						'image_hover_effect_four'			=> $image_hover_effect_four,
 						'title_thumb'						=> $title_thumb,
 						'image_numbering'					=> $image_numbering,
+						'thumb_border'						=> $thumb_border,
 						'no_spacing'						=> $no_spacing,
 						'gray_scale'						=> $gray_scale,
+						'sort_by_title'						=> $sort_by_title,
 						'url_target'						=> $url_target,
 						'filter_bg'							=> $filter_bg,
 						'filter_title_color'				=> $filter_title_color,
 						'light-box'							=> $light_box,
 						'hide_filters'						=> $hide_filters,
+						'all_txt'							=> $all_txt,
+						'sort_filter_order'					=> $sort_filter_order,
+						'filter_position'					=> $filter_position,
+						'search_box'						=> $search_box,
+						'search_txt'						=> $search_txt,
+						'bootstrap_disable'					=> $bootstrap_disable,
 						'custom-css'						=> $custom_css,
 						
 					);		
