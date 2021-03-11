@@ -1,2 +1,4 @@
 2021-03-11T13:23:28+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\wamp64\www\Transafrica\wp-content\plugins\elementor-pro\modules\theme-builder\conditions\child-of.php on line 6
 
+2021-03-11T14:10:08+00:00 CRITICAL Out of memory (allocated 69206016) (tried to allocate 32768 bytes) in C:\wamp64\www\Transafrica\wp-content\plugins\hashbar-wp-notification-bar\admin\cmb2\includes\CMB2.php on line 945
+
